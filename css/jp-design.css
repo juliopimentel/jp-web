@@ -1,0 +1,5848 @@
+/*-----design-----*/
+#web_design {
+    background: rgb(241, 244, 244);
+    background: linear-gradient(180deg, rgba(241, 244, 244, 1) 0%, rgba(205, 224, 221, 1) 80%);
+}
+
+#web_design .active-menu {
+    color: #70A3A6 !important;
+}
+
+#web_design .menu-slider {
+    background-color: #70A3A6;
+
+}
+
+.square-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .7s;
+}
+
+.square-mark-title {
+    position: absolute;
+    text-align: center;
+    color: #5c777f;
+    font-weight: 400;
+    margin: 0;
+    transform: translate3d(0, 40px, 0);
+    letter-spacing: 2px;
+    opacity: 0;
+    transition: all .7s ease;
+    font-size: 46px;
+}
+
+.square-mark-title-in {
+
+    transform: translate3d(0, 0, 0) !important;
+    opacity: 1 !important;
+    padding-bottom: 10px;
+}
+
+.square-mark,
+.square-mark-line-x,
+.square-mark-line-y {
+    opacity: 0;
+    position: absolute;
+    width: 640px;
+}
+
+.square-mark,
+.square-mark-line-x,
+.square-mark-line-y,
+.square-mark-line--x,
+.square-mark-line--y {
+
+    transition: all .7s ease;
+}
+
+.square-mark-line-x {
+    transform: scale3d(.6, 1, 1);
+}
+
+.square-mark-line-y {
+    transform: scale3d(1, .6, 1) rotate3d(1, 1, 90, 90deg);
+}
+
+
+
+
+
+.square-mark-line-x-in {
+    transform: scale3d(1, 1, 1);
+    opacity: 1 !important;
+}
+
+
+.square-mark-line-y-in {
+    transform: scale3d(1, 1, 1) rotate3d(1, 1, 90, 90deg);
+    opacity: 1 !important;
+
+}
+
+
+
+.square-mark {
+    transform: scale(.7);
+}
+
+.square-mark-line {
+
+    transform: scale(1);
+}
+
+.square-mark-in {
+    transform: scale(1) !important;
+    opacity: 1 !important;
+}
+
+
+/*-----design_wrapper------*/
+.design-txt-intro {
+    padding: 300px 0 400px !important;
+}
+
+.design-p-1,
+.design-p-2,
+.design-p-3 {
+    color: #919191;
+    line-height: 150%;
+    position: relative;
+    text-align: justify;
+    margin: auto;
+    width: 1100px;
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.design-p-line {
+    background-color: rgba(0, 0, 0, 0.08);
+    margin: 90px auto;
+    width: 0;
+    height: 2px;
+    transition: all .5s ease;
+}
+
+.design-p-line-in {
+    width: 500px;
+}
+
+.design-p-1 {
+    transform: translate3d(0, 50px, 0);
+}
+
+.design-p-2 {
+    transform: translate3d(0, -50px, 0);
+}
+
+.design-p-3 {
+    padding-top: 50px;
+    text-align: center !important;
+    transform: translate3d(0, -50px, 0);
+}
+
+.design-p-in {
+    transform: translate3d(0, 0, 0) !important;
+    opacity: 1;
+}
+
+
+.design-logos-wrapper {
+    margin: auto;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 220px;
+}
+
+.design-logos {
+    width: 15%;
+    padding: 4%;
+    margin: 3%;
+    cursor: pointer;
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+    transition: all 1s ease;
+    opacity: 0;
+}
+
+.design-logos-slower {
+    transition: all .4s ease !important;
+}
+
+
+.design-logos-in {
+    opacity: 1;
+}
+
+.design-logos-hov {
+    transform: scale3d(1.08, 1.08, 1);
+}
+
+.design-logos-hov-r {
+    opacity: .5;
+
+}
+
+
+
+
+/*
+-----jp-modal-----
+*/
+
+
+
+.jp-modal-wrapper {
+    top: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    position: fixed !important;
+    width: 100%;
+    height: 100vh;
+    z-index: 5000;
+    overflow: scroll !important;
+
+    /*FireFox*/
+    scrollbar-width: none !important;
+    /*IE10+*/
+    -ms-overflow-style: -ms-autohiding-scrollbar !important;
+
+}
+
+.jp-modal-wrapper::-webkit-scrollbar {
+
+    /* WebKit */
+    -webkit-appearance: none !important;
+    /*Chrome, Safari, Edge*/
+    display: none !important;
+    width: 0 !important
+}
+
+
+.blackdrop {
+    position: fixed !important;
+    top: 0px;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    z-index: 5300;
+    opacity: 0;
+    transition: all .5s ease;
+}
+
+.blackdrop-in {
+
+    transition: all .5s ease;
+    opacity: .6 !important;
+}
+
+.jp-inner-modal-color {
+    opacity: 1;
+    left: 0;
+    right: 0;
+    z-index: 5600;
+    border-radius: 20px !important;
+    width: 100%;
+    background: rgb(232, 241, 248);
+    background: linear-gradient(270deg, rgba(232, 241, 248, 1) 0%, rgba(245, 241, 245, 1) 100%);
+}
+
+.jp-inner-modal {
+    opacity: 0;
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 5600;
+    transition: all .7s ease !important;
+    margin: 60px auto !important;
+    padding-bottom: 100px;
+    width: 90%;
+    color: #7D8A8E !important;
+    transform: translate3d(0, 150px, 0);
+
+}
+
+.jp-inner-modal-in {
+    opacity: 1 !important;
+    transform: translate3d(0, 0, 0) !important;
+}
+
+.projects-main-slider {
+    transition: opacity .4s ease !important;
+    opacity: 1;
+    position: relative !important;
+}
+
+.projects-main-slider-toggle {
+    opacity: 0 !important;
+}
+
+.slick-list {
+    transition: all .7s cubic-bezier(.45,0,.6,1)!important;
+}
+.jp-slide-wrp {
+    opacity: 0;
+    transition: opacity .7s ease;
+    position: relative;
+}
+
+.jp-slide-wrp-in {
+    opacity: 1 !important;
+}
+
+
+.modal-footer {
+    width: 100%;
+    position: relative;
+}
+
+
+.disable-button {
+    pointer-events: none;
+
+}
+
+.modal-bold {
+    font-weight: 500 !important;
+    letter-spacing: .5px;
+}
+
+
+
+
+.jp-modal-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px 20px;
+    position: relative;
+    z-index: 6000;
+
+}
+
+.jp-modal-buttons {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    cursor: pointer;
+    opacity: .4;
+    transition: opacity .3s;
+
+}
+
+.jpm-logo {
+    width: 80px !important;
+    margin: 0 10px;
+}
+
+.jpm-arrow {
+    width: 15px !important;
+    opacity: .8;
+}
+
+.jpm-arrow-left {
+    transform: scaleX(-1);
+}
+
+
+
+.jp-modal-nav p {
+    color: #5C777F;
+    cursor: pointer;
+    opacity: .4;
+    transition: opacity .3s;
+}
+
+.jp-modal-nav p:hover {
+    opacity: 1 !important;
+}
+
+.modal-imgs {
+    opacity: 0;
+    transition: opacity .7s ease;
+}
+
+.modal-imgs-in {
+    opacity: 1 !important;
+}
+
+
+.the-logo,
+.jpm-inner-block,
+.typeface,
+.applications,
+.jpm-inner-flex,
+.stationery,
+.ui-design,
+.applications {
+    width: 1600px;
+    margin: 0 auto;
+}
+
+
+
+.jpm-inner-flex {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+}
+
+.text-push-wrapper {
+    margin-left: 100px;
+    position: relative;
+}
+
+
+/*Intro*/
+
+
+.modal-hero img {
+    margin: 0;
+    height: 250px;
+    width: auto;
+}
+
+
+.modal-hero {
+    width: 100%;
+    height: calc(100vh - 100px);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.jp-modal-title {
+    display: flex;
+}
+
+.jp-modal-title .number {
+    font-weight: 500;
+    border-bottom: 3px solid #7D8A8E;
+}
+
+.jp-modal-title .ld-title {
+    font-weight: 500;
+    padding-left: 10px;
+}
+
+
+.short-description {
+    text-align: justify;
+}
+
+.what-i-did {
+    margin-left: 50px;
+}
+
+.description-img {
+    position: absolute;
+    object-fit: contain;
+    width: auto !important;
+    right: 0;
+}
+
+
+/*Julio Woodwork*/
+
+#woodp .short-description {
+    width: 580px;
+}
+
+#woodp .description-img {
+    right: 40px;
+    bottom: -15px;
+    height: 300px !important;
+}
+
+#woodp .the-logo .explanation {
+    width: 764px;
+}
+
+#woodp .logo-steps-item:first-child {
+    transform: translateY(20px)
+}
+
+#woodp .logo-steps-item img {
+    filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.15));
+    padding: 10px 0;
+    height: 220px;
+}
+
+
+
+
+/*Roots*/
+#roots .short-description {
+    width: 540px;
+}
+
+#roots .description-img {
+    right: 30px;
+    bottom: -20px;
+    height: 350px !important;
+}
+
+#roots .the-logo .explanation {
+    width: 780px;
+}
+
+#roots .logo-comp {
+
+    height: 130px;
+    top: -20px;
+    right: 100px;
+}
+
+#roots .logo-steps {
+    width: 100%;
+    margin-left: auto;
+    justify-content: space-between;
+}
+
+.logo-steps-item-full {
+    text-align: center;
+    width: 1100px;
+}
+
+#roots .logo-steps-item-full img {
+    height: 140px;
+    margin-left: auto;
+}
+
+#roots .logo-steps-item p {
+    text-align: justify;
+    width: 300px;
+    margin-left: 0;
+}
+
+#roots .logo-steps-item img {
+    height: 250px;
+}
+
+#roots .logo-steps:last-child {
+    width: 700px;
+    justify-content: space-around;
+    padding-right: 100px;
+    margin: -100px auto 270px !important;
+}
+
+
+
+
+/*Sweet*/
+#sweet .short-description {
+    width: 665px;
+}
+
+#sweet .description-img {
+    bottom: 0px;
+    height: 330px !important;
+}
+
+#sweet .logo-steps:last-child {
+    width: 800px;
+    justify-content: space-around;
+    padding-right: 100px;
+    margin: -100px auto 270px !important;
+}
+
+#sweet .explanation {
+    width: 625px;
+}
+
+#sweet .logo-steps-item img {
+
+    height: 180px;
+}
+
+#sweet .logo-steps:last-child img {
+    height: 300px;
+}
+
+
+
+/*Mineria*/
+#mineriav .short-description {
+    width: 490px;
+}
+
+#mineriav .description-img {
+    bottom: -40px;
+    height: 320px !important;
+}
+
+#mineriav .explanation {
+    width: 810px;
+}
+
+#mineriav .logo-steps-item img {
+    height: 100px;
+}
+
+#mineriav .ls-logo {
+    margin-bottom: 20px;
+}
+
+
+/*Tria*/
+#tria .short-description {
+    width: 762px;
+}
+
+#tria .description-img {
+    right: 20px;
+    bottom: -100px;
+    height: 370px !important;
+}
+
+#tria .explanation {
+    width: 630px;
+}
+
+#tria .logo-steps-item img {
+    height: 100px;
+    padding-left: 20px;
+    margin-bottom: 30px;
+}
+
+#tria .logo-steps-symbol {
+    margin-top: -40px;
+}
+
+#tria .ls-logo {
+    transform: scale(1.1);
+    margin-top: -115px;
+}
+
+
+
+
+/*Piston*/
+#pistonp .short-description {
+    width: 920px;
+    bottom: 0;
+    height: 170px !important;
+}
+
+#pistonp .description-img {
+    right: 10px;
+    bottom: 0;
+    height: 170px !important;
+}
+
+#pistonp .explanation {
+    width: 718px;
+}
+
+#pistonp .logo-steps-item img {
+    height: 130px;
+    margin-bottom: 15px;
+}
+
+#pistonp .logo-steps-symbol {
+    margin-top: 30px;
+}
+
+#pistonp .ls-logo {
+    margin-top: -50px;
+    transform: scale(1.15);
+}
+
+
+
+/*Clandestine*/
+#clandestine .short-description {
+    width: 750px;
+}
+
+#clandestine .description-img {
+    right: 20px;
+    bottom: -60px;
+    height: 340px !important;
+}
+
+#clandestine .explanation {
+    width: 920px;
+}
+
+#clandestine .logo-steps-item img {
+    height: 80px;
+}
+
+#clandestine .logo-steps-symbol {
+    margin-top: 30px;
+}
+
+#clandestine .ls-logo {
+    margin-top: -25px;
+    transform: scale(1.1)
+}
+
+/*Doble*/
+#doblep .short-description {
+    width: 636px;
+}
+
+#doblep .description-img {
+    bottom: -40px;
+    height: 320px !important;
+}
+
+#doblep .explanation {
+    width: 660px;
+}
+
+
+.spinning-doble {
+    margin-top: 0px !important;
+    margin-bottom: 230px !important;
+    height: 250px;
+    margin: auto;
+    animation: rotation 5s infinite cubic-bezier(.65, 0, .15, 1);
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    20% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    70% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/*Giselle*/
+#giselle .short-description {
+    width: 610px;
+}
+
+#giselle .description-img {
+    right: 130px;
+    bottom: -80px;
+    height: 320px !important;
+}
+
+#giselle .explanation {
+    width: 753px;
+}
+
+#giselle .logo-steps-item img {
+    height: 90px;
+}
+
+#giselle .logo-steps-symbol {
+    margin-top: 30px;
+}
+
+#giselle .ls-logo {
+    transform: scale(1.1);
+    margin-top: -50px;
+}
+
+.summit-logos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.summit-logos img {
+    margin: 150px 0 300px;
+    height: 230px !important;
+}
+
+.infographygcs {
+    text-align: center;
+}
+
+.infographygcs img {
+    height: 1000px;
+    margin: 150px auto 300px !important;
+
+    background-color: #ffffff;
+    padding: 15px;
+    margin-bottom: 20px;
+    filter: drop-shadow(7px 7px 7px rgba(0, 0, 0, 0.07));
+
+}
+
+
+
+
+
+/*CEP*/
+#cep .short-description {
+    width: 764px;
+}
+
+#cep .description-img {
+    bottom: -50px;
+    height: 270px !important;
+}
+
+#cep .explanation {
+    width: 490px;
+}
+
+#cep .logo-steps-item img {
+    height: 130px;
+}
+
+#cep .ls-logo {
+    transform: scale(1.1);
+}
+
+
+
+
+/*Dalta*/
+#dalta .short-description {
+    width: 540px;
+}
+
+#dalta .description-img {
+    right: 200px;
+    bottom: -20px;
+    height: 250px !important;
+}
+
+#dalta .explanation {
+    width: 720px;
+}
+
+
+
+
+
+/*Flavor*/
+#flavor .short-description {
+    width: 588px;
+}
+
+#flavor .description-img {
+    right: 150px;
+    bottom: -30px;
+    height: 250px !important;
+}
+
+#flavor .explanation {
+    width: 644px;
+}
+
+#flavor .logo-steps-item img {
+    height: 120px;
+}
+
+
+
+
+
+/*Retumba*/
+#retumba .short-description {
+    width: 500px;
+}
+
+#retumba .description-img {
+    right: 300px;
+    bottom: -60px;
+    height: 300px !important;
+}
+
+#retumba .explanation {
+    width: 593px;
+}
+
+#retumba .logo-steps-item img {
+    height: 180px;
+}
+
+
+/*Dive*/
+#dive .short-description {
+    width: 640px;
+}
+
+#dive .description-img {
+    right: 120px;
+    bottom: -40px;
+    height: 220px !important;
+}
+
+#dive .logo-steps-item img {
+    height: 220px;
+    padding-top: 60px;
+}
+
+
+/*Senaleticas*/
+
+#senaleticas .modal-hero img {
+    margin: 0;
+    height: 350px;
+    width: auto;
+    filter: saturate(0);
+}
+
+#senaleticas .short-description {
+    width: 550px;
+}
+
+#senaleticas .description-img {
+    right: 100px;
+    bottom: -100px;
+    height: 300px !important;
+}
+
+#senaleticas .explanation {
+    width: 610px;
+}
+
+#senaleticas .logo-steps img {
+    height: 500px;
+}
+
+
+
+
+/*Smile*/
+#smile .short-description {
+    width: 620px;
+    margin-bottom: 280px;
+}
+
+/*The logo*/
+.the-logo {
+    margin-top: 180px;
+}
+
+.the-logo .explanation {
+    margin: 20px 0 150px 0;
+    text-align: justify;
+}
+
+.logo-comp {
+    position: absolute;
+}
+
+.logo-steps {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 340px;
+    padding-right: 100px;
+}
+
+.logo-steps-sketch {
+    margin-left: 220px !important;
+}
+
+.logo-steps-item {
+    text-align: center;
+}
+
+.logo-steps-item img {
+    margin: auto;
+}
+
+
+
+
+.logo-steps-item p {
+    margin: 10px;
+}
+
+.logo-steps-symbol {
+    margin: 80px;
+    font-size: 28px;
+}
+
+.logo-steps-symbol img {
+    height: 20px;
+}
+
+
+.the-logo .ls-logo {
+    height: 180px;
+    filter: saturate(0);
+    opacity: .8;
+}
+
+/*Color*/
+
+
+
+
+
+
+.color-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 100px auto 350px;
+}
+
+.color-circle {
+    text-align: center;
+    margin: 0 30px;
+}
+
+.color-circle p {
+    margin: 20px 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.color-circle .color {
+    width: 70px;
+    height: 70px;
+    border-radius: 70px;
+    margin: auto;
+}
+
+.color-rectangles-wrapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.false-circle {
+    display: none;
+}
+
+
+
+/*Type*/
+.typeface .text-push-wrapper {
+    display: flex;
+    justify-content: flex-start;
+
+}
+
+.use-method:first-child {
+    margin-right: 200px;
+}
+
+.where-method {
+    font-weight: 400;
+    font-size: 32px;
+}
+
+.font-name {
+
+    font-weight: 500;
+    font-size: 30px;
+}
+
+.font-name-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0 0 40px 50px;
+
+}
+
+.font-characters-wrapper {
+    display: flex;
+    margin: 0 0 350px 50px;
+}
+
+.font-characters-wrapper img:first-child {
+    margin: 0 !important;
+}
+
+.font-characters-wrapper img {
+    height: 300px;
+    margin-left: 80px;
+}
+
+.stationery-wrp {
+    margin-bottom: 300px;
+    text-align: center;
+}
+
+.ui-design-wrp {
+    margin-bottom: 300px;
+    text-align: center;
+}
+
+.stationery-wrp img,
+.ui-design-wrp img {
+    margin: auto;
+}
+
+.stationery-wrp img:nth-child(1) {
+    margin-top: 100px;
+    height: 900px;
+}
+
+.stationery-wrp img:nth-child(2) {
+    height: 490px;
+    padding-right: 10px;
+}
+
+.ui-design-wrp img:nth-child(1) {
+    margin-top: 100px;
+    height: 700px;
+}
+
+.ui-design-wrp img:nth-child(2) {
+    margin-top: 400px;
+    height: 700px;
+}
+
+.ui-design-wrp img:nth-child(3) {
+    margin-top: 300px;
+    height: 600px;
+}
+
+
+
+/*-----carousel-----*/
+
+
+.jp-slide-wrp .carousel {
+    width: 100%;
+    margin: 100px auto 300px;
+
+}
+
+.jp-slide-wrp .carousel-inner {
+    width: 100% !important;
+    margin: auto;
+}
+
+.jp-slide-wrp .carousel-item {
+    width: 100%;
+    height: 1000px;
+    margin-bottom: 20px;
+    transition: all .7s ease;
+}
+
+.jp-slide-wrp .carousel-item .carousel-slide-wrp {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../images/loader.gif);
+    background-position: center center;
+    background-size: 80px;
+    background-repeat: no-repeat;
+
+
+}
+
+.jp-slide-wrp .carousel-item img {
+    opacity: 0;
+    position: absolute !important;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0;
+    margin: auto;
+    width: auto;
+    max-height: 100%;
+    object-fit: contain !important;
+    background-color: #ffffff;
+    padding: 11px;
+    filter: drop-shadow(6px 6px 6px rgba(0, 0, 0, 0.05));
+    transition: opacity .6s ease;
+
+
+}
+
+
+.carouselimg-in {
+    opacity: 1 !important;
+}
+
+.jp-slide-wrp .carousel-indicators {
+    width: 80% !important;
+    margin: auto;
+    bottom: -150px;
+    display: flex !important;
+    justify-content: center
+}
+
+.jp-slide-wrp .carousel-indicators li {
+    width: auto;
+    height: 80px;
+    background-color: transparent !important;
+    padding: 5px;
+    opacity: .5;
+    margin: 5px;
+    transition: all .4s ease !important;
+    display: flex;
+
+}
+
+.jp-slide-wrp .carousel-indicators li:hover {
+    opacity: .8;
+    transform: translateY(-6px);
+}
+
+.jp-slide-wrp .carousel-indicators li.active {
+    opacity: 1 !important;
+    transform: translateY(-13px);
+}
+
+
+.jp-slide-wrp .carousel-indicators li img {
+    height: 100%;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity .8s;
+
+}
+
+.indicators-in {
+    opacity: 1 !important;
+}
+
+
+
+.jp-slide-wrp .car-arrows {
+    width: 500px;
+    padding-right: 110px;
+    padding-left: 340px;
+    height: 100%;
+    cursor: pointer;
+    opacity: .7;
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.05));
+    transition: all .3s ease;
+}
+
+.jp-slide-wrp .carousel-control-prev {
+    left: 0;
+
+    transform: scaleX(-1);
+}
+
+.jp-slide-wrp .carousel-control-next {
+    right: 0;
+}
+
+.jp-slide-wrp .carousel-control-prev:hover {
+    transform: scaleX(-1.08) scaleY(1.08) translateX(-3px);
+    opacity: 1 !important;
+
+}
+
+.jp-slide-wrp .carousel-control-next:hover {
+    transform: scale(1.08) translateX(-3px);
+    opacity: 1 !important;
+}
+
+.jp-slide-wrp .carousel-control-next:active {
+    opacity: .4 !important;
+}
+
+#woodp .c1 {
+    background-color: #DDE2E3;
+}
+
+#woodp .c2 {
+    background-color: #9AACB8;
+}
+
+#woodp .c3 {
+    background-color: #5198A4;
+}
+
+#woodp .c4 {
+    background-color: #0E4D5E;
+}
+
+#woodp .c5 {
+    background-color: #829901;
+}
+
+#woodp .c6 {
+    background-color: #B37C57;
+}
+
+#roots .c1 {
+    background-color: #55857D;
+}
+
+#roots .c2 {
+    background-color: #425454;
+}
+
+#roots .c3 {
+    background-color: #7B564E;
+}
+
+#roots .c4 {
+    background-color: #655641;
+}
+
+#roots .c5 {
+    background-color: #C95C20;
+}
+
+#roots .c6 {
+    background-color: #E3AA00;
+}
+
+#roots .c7 {
+    background-color: #E3AA00;
+}
+
+#sweet .c1 {
+    background-color: #F9E5B9;
+}
+
+#sweet .c2 {
+    background-color: #ECA021;
+}
+
+#sweet .c3 {
+    background-color: #A17136;
+}
+
+#sweet .c4 {
+    background-color: #663433;
+}
+
+#sweet .c5 {
+    background-color: #000000;
+}
+
+#mineriav .c1 {
+    background-color: #a9abb8;
+}
+
+#mineriav .c2 {
+    background-color: #bda14e;
+}
+
+#mineriav .c3 {
+    background-color: #ffcc00;
+}
+
+#mineriav .c4 {
+    background-color: #0099ff;
+}
+
+#mineriav .c5 {
+    background-color: #063b5a;
+}
+
+#mineriav .c6 {
+    background-color: #474866;
+}
+
+#mineriav .c7 {
+    background-color: #2b2b29;
+}
+
+#tria .c1 {
+    background-color: #919191;
+}
+
+#tria .c2 {
+    background-color: #eeedd9;
+}
+
+#tria .c3 {
+    background-color: #ffc20f;
+}
+
+#tria .c4 {
+    background-color: #108690;
+}
+
+#tria .c5 {
+    background-color: #124d6d;
+}
+
+#tria .c6 {
+    background-color: #673173;
+}
+
+#tria .c7 {
+    background-color: #a02a87;
+}
+
+#pistonp .c1 {
+    background-color: #a3b7d1;
+}
+
+#pistonp .c2 {
+    background-color: #0098ff;
+}
+
+#pistonp .c3 {
+    background-color: #003366;
+}
+
+#pistonp .c4 {
+    background-color: #989898;
+}
+
+#pistonp .c5 {
+    background-color: #d6c183;
+}
+
+#clandestine .c1 {
+    background-color: #3b2e1e;
+}
+
+#clandestine .c2 {
+    background-color: #9b6b4b;
+}
+
+#clandestine .c3 {
+    background-color: #588037;
+}
+
+#clandestine .c4 {
+    background-color: #b1bf49;
+}
+
+#clandestine .c5 {
+    background-color: #e2ceb3;
+}
+
+#clandestine .c6 {
+    background-color: #7f6c8a;
+}
+
+#doblep .c1 {
+    background-color: #cccccc;
+}
+
+#doblep .c2 {
+    background-color: #666666;
+}
+
+#doblep .c3 {
+    background-color: #771100;
+}
+
+#doblep .c4 {
+    background-color: #ff3300;
+}
+
+#doblep .c5 {
+    background-color: #ff9900;
+}
+
+#doblep .c6 {
+    background-color: #8bb7c9;
+}
+
+#giselle .c1 {
+    background-color: #a5a596;
+}
+
+#giselle .c2 {
+    background-color: #666666;
+}
+
+#giselle .c3 {
+    background-color: #014141;
+}
+
+#giselle .c4 {
+    background-color: #00aeae;
+}
+
+#giselle .c5 {
+    background-color: #bdb503;
+}
+
+#giselle .c6 {
+    background-color: #f9b749;
+}
+
+#cep .c1 {
+    background-color: #cfd8dc;
+}
+
+#cep .c2 {
+    background-color: #83a0c0;
+}
+
+#cep .c3 {
+    background-color: #2b4e6c;
+}
+
+#cep .c4 {
+    background-color: #263238;
+}
+
+#cep .c5 {
+    background-color: #d19920;
+}
+
+#dalta .c1 {
+    background-color: #d0dce8;
+}
+
+#dalta .c2 {
+    background-color: #728cad;
+}
+
+#dalta .c3 {
+    background-color: #0a62d8;
+}
+
+#dalta .c4 {
+    background-color: #727272;
+}
+
+#dalta .c5 {
+    background-color: #958957;
+}
+
+#flavor .c1 {
+    background-color: #f4eeb4;
+}
+
+#flavor .c2 {
+    background-color: #a14016;
+}
+
+#flavor .c3 {
+    background-color: #cc883a;
+}
+
+#flavor .c4 {
+    background-color: #89a194;
+}
+
+#flavor .c5 {
+    background-color: #053b47;
+}
+
+#flavor .c6 {
+    background-color: #232323;
+}
+
+#retumba .c1 {
+    background-color: #dddddb;
+}
+
+#retumba .c2 {
+    background-color: #eed6ca;
+}
+
+#retumba .c3 {
+    background-color: #f9972d;
+}
+
+#retumba .c4 {
+    background-color: #55185d;
+}
+
+#retumba .c5 {
+    background-color: #4b7582;
+}
+
+#retumba .c6 {
+    background-color: #4f4f4f;
+}
+
+#dive .c1 {
+    background-color: #e7f0ed;
+}
+
+#dive .c2 {
+    background-color: #7fbac2;
+}
+
+#dive .c3 {
+    background-color: #00ccff;
+}
+
+#dive .c4 {
+    background-color: #164f56;
+}
+
+#dive .c5 {
+    background-color: #999999;
+}
+
+#dive .c6 {
+    background-color: #dbb13b;
+}
+
+
+
+
+
+
+
+/* 1920-1440*/
+/*1920*/
+@media all and (max-width: 2100px) {
+
+
+
+    .square-mark-title {
+        letter-spacing: 2px;
+        font-size: 40px;
+    }
+
+    .square-mark-title-in {
+        padding-bottom: 7px;
+    }
+
+    .square-mark,
+    .square-mark-line-x,
+    .square-mark-line-y {
+        width: 560px;
+    }
+
+
+
+
+    /*-----design_wrapper------*/
+    .design-txt-intro {
+        padding: 240px 0 300px !important;
+    }
+
+    .design-p-1,
+    .design-p-2,
+    .design-p-3 {
+        width: 940px;
+    }
+
+    .design-p-line {
+        margin: 85px auto;
+    }
+
+    .design-p-line-in {
+        width: 440px;
+    }
+
+    .design-logos-wrapper {
+        padding-bottom: 210px;
+    }
+
+
+
+
+
+    /*
+-----jp-modal-----
+*/
+
+    .jp-inner-modal-color {
+        border-radius: 17px !important;
+    }
+
+    .jp-inner-modal {
+        margin: 55px auto !important;
+        padding-bottom: 90px;
+        /*width: 90%;/**/
+    }
+
+
+
+    .jp-modal-nav {
+        padding: 15px 18px;
+    }
+
+    .jpm-logo {
+        width: 75px !important;
+        margin: 0 8px;
+    }
+
+    .jpm-arrow {
+        width: 14px !important;
+    }
+
+    .the-logo,
+    .jpm-inner-block,
+    .typeface,
+    .applications,
+    .jpm-inner-flex,
+    .stationery,
+    .ui-design,
+    .applications {
+        width: 1200px;
+    }
+
+
+
+
+    .text-push-wrapper {
+        margin-left: 80px;
+    }
+
+
+    /*Intro*/
+
+    .modal-hero img {
+        height: 230px;
+    }
+
+    .jp-modal-title {
+        display: flex;
+    }
+
+    .jp-modal-title .number {
+        font-weight: 500;
+        border-bottom: 3px solid #7D8A8E;
+    }
+
+    .jp-modal-title .ld-title {
+        font-weight: 500;
+        padding-left: 10px;
+    }
+
+    .what-i-did {
+        margin-left: 45px;
+    }
+
+    /*The logo*/
+
+    .the-logo .explanation {
+        margin: 20px 0 130px 0;
+    }
+
+    .logo-comp {
+        position: absolute;
+    }
+
+    .logo-steps {
+        margin: 0 auto 250px;
+        padding-right: 0;
+    }
+
+    .logo-steps-sketch {
+        margin-left: auto !important;
+    }
+
+    .logo-steps-item p {
+        margin: 5px;
+    }
+
+    .logo-steps-symbol {
+        margin: 50px;
+    }
+
+    .logo-steps-symbol img {
+        height: 16px;
+    }
+
+
+    .the-logo .ls-logo {
+        height: 160px;
+    }
+
+    /*Color*/
+
+    .color-wrapper {
+        margin: 100px auto 280px;
+    }
+
+    .color-circle .color {
+        width: 60px;
+        height: 60px;
+    }
+
+    .color-circle {
+        margin: 0 25px;
+    }
+
+    .color-circle p {
+        margin: 17px 0;
+    }
+
+    .color-rectangles-wrapper {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+
+    /*Type*/
+
+    .use-method:first-child {
+        margin-right: 100px;
+    }
+
+    .font-name-wrapper {
+        margin: 0 0 35px 40px;
+
+    }
+
+    .font-characters-wrapper {
+        margin: 0 0 250px 40px;
+    }
+
+    .font-characters-wrapper img {
+        height: 250px;
+        margin-left: 65px;
+    }
+
+
+
+    .stationery-wrp {
+        margin-bottom: 150px;
+    }
+
+    .ui-design-wrp {
+        margin-bottom: 150px;
+    }
+
+    .stationery-wrp img,
+    .ui-design-wrp img {
+        margin: auto;
+    }
+
+    .stationery-wrp img:nth-child(1) {
+        margin-top: 70px;
+        height: 700px;
+    }
+
+    .stationery-wrp img:nth-child(2) {
+        height: 380px;
+    }
+
+    .ui-design-wrp img:nth-child(1) {
+        margin-top: 70px;
+        height: 520px;
+    }
+
+    .ui-design-wrp img:nth-child(2) {
+        margin-top: 300px;
+        height: 500px;
+    }
+
+    .ui-design-wrp img:nth-child(3) {
+        margin-top: 200px;
+        height: 400px;
+    }
+
+
+
+
+
+
+
+    /*Julio Woodwork*/
+
+    #woodp .short-description {
+        width: 480px;
+    }
+
+    #woodp .description-img {
+        right: 0px;
+        height: 240px !important;
+    }
+
+    #woodp .the-logo .explanation {
+        width: 600px;
+    }
+
+    #woodp .logo-steps-item:first-child {
+        transform: translateY(20px)
+    }
+
+    #woodp .logo-steps-item img {
+        filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.15));
+        padding: 10px 0;
+        height: 190px;
+    }
+
+
+
+
+    /*Roots*/
+    #roots .short-description {
+        width: 470px;
+    }
+
+    #roots .description-img {
+        right: 15px;
+        bottom: -17px;
+        height: 300px !important;
+    }
+
+    #roots .the-logo .explanation {
+        width: 640px;
+    }
+
+    #roots .logo-comp {
+
+        height: 115px;
+        top: -10px;
+        right: 10px;
+    }
+
+    #roots .logo-steps {
+        width: 100%;
+        margin-left: auto;
+        justify-content: space-between;
+    }
+
+    .logo-steps-item-full {
+        text-align: center;
+        width: 900px;
+    }
+
+    #roots .logo-steps-item-full img {
+        height: 115px;
+        margin-left: auto;
+    }
+
+    #roots .logo-steps-item p {
+        width: 245px;
+    }
+
+    #roots .logo-steps-item img {
+        height: 220px;
+    }
+
+    #roots .logo-steps:last-child {
+        width: 620px;
+        padding-right: 80px;
+        margin: -100px auto 250px !important;
+    }
+
+
+
+
+    /*Sweet*/
+    #sweet .short-description {
+        width: 460px;
+    }
+
+    #sweet .description-img {
+        bottom: 0px;
+        height: 290px !important;
+    }
+
+    #sweet .logo-steps:last-child {
+        width: 800px;
+        justify-content: space-around;
+        padding-right: 100px;
+        margin: -100px auto 270px !important;
+    }
+
+    #sweet .explanation {
+        width: 625px;
+    }
+
+    #sweet .logo-steps-item img {
+
+        height: 155px;
+    }
+
+    #sweet .logo-steps:last-child img {
+        height: 240px;
+    }
+
+
+    /*Mineria*/
+    #mineriav .short-description {
+        width: 420px;
+    }
+
+    #mineriav .description-img {
+        bottom: -40px;
+        height: 270px !important;
+    }
+
+    #mineriav .explanation {
+        width: 677px;
+    }
+
+    #mineriav .logo-steps-item img {
+        height: 80px;
+    }
+
+    #mineriav .ls-logo {
+        margin-bottom: 10px;
+    }
+
+    #mineriav .font-characters-wrapper img {
+        height: 270px;
+    }
+
+
+    /*Tria*/
+    #tria .short-description {
+        width: 642px;
+    }
+
+    #tria .description-img {
+        right: 10px;
+        bottom: -70px;
+        height: 300px !important;
+    }
+
+    #tria .explanation {
+        width: 528px;
+    }
+
+    #tria .logo-steps-item img {
+        height: 80px;
+        padding-left: 15px;
+        margin-bottom: 25px;
+    }
+
+    #tria .logo-steps-symbol {
+        margin-top: -20px;
+    }
+
+    #tria .ls-logo {
+        margin-top: -95px;
+    }
+
+
+
+
+
+    /*Piston*/
+    #pistonp .short-description {
+        width: 770px;
+        height: 130px !important;
+    }
+
+    #pistonp .description-img {
+        right: 10px;
+        height: 150px !important;
+    }
+
+    #pistonp .explanation {
+        width: 610px;
+    }
+
+    #pistonp .logo-steps-item img {
+        height: 110px;
+        margin-bottom: 15px;
+    }
+
+    #pistonp .logo-steps-symbol {
+        margin-top: 20px;
+    }
+
+    #pistonp .ls-logo {
+        margin-top: -30px;
+    }
+
+
+
+    /*Clandestine*/
+    #clandestine .short-description {
+        width: 630px;
+    }
+
+    #clandestine .description-img {
+        right: 10px;
+        bottom: -40px;
+        height: 280px !important;
+    }
+
+    #clandestine .explanation {
+        width: 760px;
+    }
+
+    #clandestine .logo-steps-item img {
+        height: 65px;
+    }
+
+    #clandestine .logo-steps-symbol {
+        margin-top: 30px;
+    }
+
+    #clandestine .ls-logo {
+        margin-top: -15px;
+    }
+
+    /*Doble*/
+    #doblep .short-description {
+        width: 552px;
+    }
+
+    #doblep .description-img {
+        bottom: -30px;
+        height: 280px !important;
+    }
+
+    #doblep .explanation {
+        width: 552px;
+    }
+
+
+    .spinning-doble {
+        margin-bottom: 180px !important;
+        height: 220px;
+    }
+
+    /*Giselle*/
+    #giselle .short-description {
+        width: 515px;
+    }
+
+    #giselle .description-img {
+        right: 100px;
+        bottom: -60px;
+        height: 290px !important;
+    }
+
+    #giselle .explanation {
+        width: 628px;
+    }
+
+    #giselle .logo-steps-item img {
+        height: 80px;
+    }
+
+    #giselle .logo-steps-symbol {
+        margin-top: 20px;
+    }
+
+    #giselle .ls-logo {
+        margin-top: -30px;
+    }
+
+
+    .summit-logos img {
+        margin: 130px 0 250px;
+        height: 180px !important;
+    }
+
+    .infographygcs img {
+        height: 800px;
+        margin: 100px auto 150px !important;
+
+        background-color: #ffffff;
+        padding: 10px;
+        margin-bottom: 20px;
+        filter: drop-shadow(4px 4px 5px rgba(0, 0, 0, 0.04));
+
+    }
+
+
+
+
+
+    /*CEP*/
+    #cep .short-description {
+        width: 635px;
+    }
+
+    #cep .description-img {
+        bottom: -40px;
+        height: 230px !important;
+    }
+
+    #cep .explanation {
+        width: 410px;
+    }
+
+    #cep .logo-steps-item img {
+        height: 120px;
+    }
+
+
+
+
+    /*Dalta*/
+    #dalta .short-description {
+        width: 448px;
+    }
+
+    #dalta .description-img {
+        right: 150px;
+        bottom: -20px;
+        height: 220px !important;
+    }
+
+    #dalta .explanation {
+        width: 604px;
+    }
+
+
+
+
+
+
+    /*Flavor*/
+    #flavor .short-description {
+        width: 488px;
+    }
+
+    #flavor .description-img {
+        right: 150px;
+        bottom: -20px;
+        height: 220px !important;
+    }
+
+    #flavor .explanation {
+        width: 544px;
+    }
+
+    #flavor .logo-steps-item img {
+        height: 100px;
+    }
+
+
+
+
+
+    /*Retumba*/
+    #retumba .short-description {
+        width: 400px;
+    }
+
+    #retumba .description-img {
+        right: 200px;
+        bottom: -40px;
+        height: 250px !important;
+    }
+
+    #retumba .explanation {
+        width: 493px;
+    }
+
+    #retumba .logo-steps-item img {
+        height: 150px;
+    }
+
+
+    /*Dive*/
+    #dive .short-description {
+        width: 513px;
+    }
+
+    #dive .description-img {
+        right: 80px;
+        bottom: -30px;
+        height: 180px !important;
+    }
+
+
+    #dive .logo-steps-item img {
+        height: 140px;
+        padding-top: 20px;
+    }
+
+
+    /*Senaleticas*/
+
+    #senaleticas .modal-hero img {
+        height: 300px;
+    }
+
+    #senaleticas .short-description {
+        width: 444px;
+    }
+
+    #senaleticas .description-img {
+        right: 70px;
+        bottom: -60px;
+        height: 250px !important;
+    }
+
+    #senaleticas .explanation {
+        width: 480px;
+    }
+
+    #senaleticas .logo-steps img {
+        height: 450px;
+    }
+
+
+
+
+    /*Smile*/
+    #smile .short-description {
+        width: 510px;
+        margin-bottom: 220px;
+    }
+
+
+
+
+
+    /*-----carousel-----*/
+
+
+    .jp-slide-wrp .carousel {
+        margin: 80px auto 200px;
+
+    }
+
+    .jp-slide-wrp .carousel-item {
+        height: 680px;
+        margin-bottom: 20px;
+    }
+
+    .jp-slide-wrp .carousel-item .carousel-slide-wrp {
+        background-size: 60px;
+
+
+    }
+
+    .jp-slide-wrp .carousel-item img {
+        padding: 9px;
+        filter: drop-shadow(4px 4px 5px rgba(0, 0, 0, 0.04));
+
+    }
+
+    .jp-slide-wrp .carousel-indicators {
+        bottom: -140px;
+    }
+
+    .jp-slide-wrp .carousel-indicators li {
+        height: 70px;
+        padding: 4px;
+        margin: 4px;
+    }
+
+    .jp-slide-wrp .carousel-indicators li:hover {
+        transform: translateY(-5px);
+    }
+
+    .jp-slide-wrp .carousel-indicators li.active {
+        transform: translateY(-12px);
+    }
+
+    .jp-slide-wrp .car-arrows {
+        width: 210px;
+        padding-right: 70px;
+        padding-left: 100px;
+    }
+
+    .jp-slide-wrp .carousel-control-prev {
+        left: 0;
+
+        transform: scaleX(-1);
+    }
+
+    .jp-slide-wrp .carousel-control-next {
+        right: 0;
+    }
+
+    .jp-slide-wrp .carousel-control-prev:hover {
+        transform: scaleX(-1.07) scaleY(1.07) translateX(3px);
+        opacity: 1 !important;
+
+    }
+
+    .jp-slide-wrp .carousel-control-next:hover {
+        transform: scale(1.07) translateX(3px);
+        opacity: 1 !important;
+    }
+
+
+
+}
+
+
+/*1630-1331*/
+/*1440*/
+@media all and (max-width: 1630px) {
+
+    .square-mark-title {
+
+        transform: translate3d(0, 30px, 0);
+        letter-spacing: 1px;
+        font-size: 33px;
+    }
+
+
+    .square-mark,
+    .square-mark-line-x,
+    .square-mark-line-y {
+        width: 460px;
+    }
+
+
+
+
+    /*-----design_wrapper------*/
+    .design-txt-intro {
+        padding: 200px 0 200px !important;
+    }
+
+    .design-p-1,
+    .design-p-2,
+    .design-p-3 {
+        width: 790px;
+    }
+
+    .design-p-3 {
+        padding-top: 35px;
+    }
+
+    .design-p-line {
+        margin: 80px auto;
+    }
+
+    .design-p-line-in {
+        width: 400px;
+    }
+
+    .design-logos-wrapper {
+        padding-bottom: 210px;
+    }
+
+
+
+
+
+
+    /*-----jp-modal-----*/
+
+    .jp-inner-modal-color {
+        border-radius: 15px !important;
+    }
+
+    .jp-inner-modal {
+        margin: 50px auto !important;
+        padding-bottom: 80px;
+        /*width: 90%;/**/
+    }
+
+    .swiper-buttons-wrapper {
+        height: 90px;
+    }
+
+
+    .swiper-buttons-wrapper .swiper-prev,
+    .swiper-buttons-wrapper .swiper-next {
+        width: 125px;
+        border-radius: 20px;
+    }
+
+    .jp-modal-nav {
+        padding: 10px 18px;
+    }
+
+    .jpm-logo {
+        width: 70px !important;
+        margin: 0 6px;
+    }
+
+    .jpm-arrow {
+        width: 12px !important;
+    }
+
+    .the-logo,
+    .jpm-inner-block,
+    .typeface,
+    .applications,
+    .jpm-inner-flex,
+    .stationery,
+    .ui-design,
+    .applications {
+        width: 940px;
+    }
+
+
+
+
+    .text-push-wrapper {
+        margin-left: 60px;
+    }
+
+
+    /*Intro*/
+
+    .modal-hero img {
+        height: 180px;
+        margin-bottom: 30px;
+    }
+
+
+    .jp-modal-title .ld-title {
+        padding-left: 8px;
+    }
+
+    .what-i-did {
+        margin-left: 35px;
+    }
+
+    /*The logo*/
+    .the-logo {
+        margin-top: 150px;
+    }
+
+    .the-logo .explanation {
+        margin: 15px 0 95px 0;
+    }
+
+    .logo-steps {
+        margin: 0 auto 150px;
+        padding-right: 0;
+    }
+
+
+
+    .logo-steps-symbol {
+        margin: 40px;
+    }
+
+    .logo-steps-symbol img {
+        height: 14px;
+    }
+
+
+    .the-logo .ls-logo {
+        height: 140px;
+    }
+
+    /*Color*/
+
+    .color-wrapper {
+        margin: 100px auto 200px;
+    }
+
+    .color-circle .color {
+        width: 50px;
+        height: 50px;
+    }
+
+    .color-circle {
+        margin: 0 20px;
+    }
+
+    .color-circle p {
+        margin: 10px 0;
+    }
+
+
+    /*Type*/
+
+    .use-method:first-child {
+        margin-right: 70px;
+    }
+
+    .font-name-wrapper {
+        margin: 0 0 35px 30px;
+
+    }
+
+    .font-characters-wrapper {
+        margin: 0 0 200px 30px;
+    }
+
+    .font-characters-wrapper img {
+        height: 200px;
+        margin-left: 55px;
+    }
+
+
+
+    .stationery-wrp {
+        margin-bottom: 100px;
+    }
+
+    .ui-design-wrp {
+        margin-bottom: 100px;
+    }
+
+    .stationery-wrp img,
+    .ui-design-wrp img {
+        margin: auto;
+    }
+
+    .stationery-wrp img:nth-child(1) {
+        margin-top: 50px;
+        height: 540px;
+    }
+
+    .stationery-wrp img:nth-child(2) {
+        height: 295px;
+    }
+
+    .ui-design-wrp img:nth-child(1) {
+        margin-top: 50px;
+        height: 400px;
+    }
+
+    .ui-design-wrp img:nth-child(2) {
+        margin-top: 200px;
+        height: 380px;
+    }
+
+    .ui-design-wrp img:nth-child(3) {
+        margin-top: 180px;
+        height: 300px;
+    }
+
+
+
+
+
+
+
+    /*Julio Woodwork*/
+
+    #woodp .short-description {
+        width: 385px;
+    }
+
+    #woodp .description-img {
+        height: 210px !important;
+        right: -20px;
+    }
+
+    #woodp .the-logo .explanation {
+        width: 448px;
+    }
+
+    #woodp .logo-steps-item:first-child {
+        transform: translateY(16px)
+    }
+
+    #woodp .logo-steps-item img {
+        filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.1));
+        padding: 3px 0;
+        height: 140px;
+    }
+
+
+
+
+    /*Roots*/
+    #roots .short-description {
+        width: 360px;
+    }
+
+    #roots .description-img {
+        right: -5px;
+        bottom: -17px;
+        height: 250px !important;
+    }
+
+    #roots .the-logo .explanation {
+        width: 510px;
+    }
+
+    #roots .logo-comp {
+
+        height: 95px;
+        top: -12px;
+        right: -10px;
+    }
+
+
+    .logo-steps-item-full {
+        text-align: center;
+        width: 650px;
+    }
+
+    #roots .logo-steps-item-full img {
+        height: 90px;
+        margin-left: auto;
+    }
+
+    #roots .logo-steps-item p {
+        width: 200px;
+    }
+
+    #roots .logo-steps-item img {
+        height: 190px;
+    }
+
+    #roots .logo-steps:last-child {
+        width: 520px;
+        padding-right: 40px;
+        margin: -100px auto 200px !important;
+    }
+
+
+
+
+    /*Sweet*/
+    #sweet .short-description {
+        width: 354px;
+    }
+
+    #sweet .description-img {
+        bottom: -20px;
+        height: 240px !important;
+        right: -25px;
+    }
+
+    #sweet .explanation {
+        width: 418px;
+    }
+
+    #sweet .logo-steps-item img {
+
+        height: 150px;
+    }
+
+    #sweet .logo-steps:last-child img {
+        height: 200px;
+    }
+
+    #sweet .logo-steps:last-child {
+        width: 600px;
+        justify-content: space-around;
+        padding-right: 100px;
+        margin: -50px auto 200px !important;
+    }
+
+
+
+    /*Mineria*/
+    #mineriav .short-description {
+        width: 325px;
+    }
+
+    #mineriav .description-img {
+        bottom: -30px;
+        height: 230px !important;
+    }
+
+    #mineriav .explanation {
+        width: 565px;
+    }
+
+    #mineriav .logo-steps-item img {
+        height: 65px;
+    }
+
+    #mineriav .ls-logo {
+        margin-bottom: 10px;
+    }
+
+    #mineriav .font-characters-wrapper img {
+        height: 260px;
+    }
+
+
+    /*Tria*/
+    #tria .short-description {
+        width: 510px;
+    }
+
+    #tria .description-img {
+        bottom: -50px;
+        height: 250px !important;
+    }
+
+    #tria .explanation {
+        width: 418px;
+    }
+
+    #tria .logo-steps-item img {
+        height: 75px;
+        padding-left: 15px;
+        margin-bottom: 20px;
+    }
+
+    #tria .logo-steps-symbol {
+        margin-top: -35px;
+    }
+
+    #tria .ls-logo {
+        margin-top: -90px;
+    }
+
+
+
+
+
+    /*Piston*/
+    #pistonp .short-description {
+        width: 610px;
+        height: 110px !important;
+    }
+
+    #pistonp .description-img {
+        height: 130px !important;
+    }
+
+    #pistonp .explanation {
+        width: 480px;
+    }
+
+    #pistonp .logo-steps-item img {
+        height: 90px;
+        margin-bottom: 15px;
+    }
+
+    #pistonp .logo-steps-symbol {
+        margin-top: 5px;
+    }
+
+    #pistonp .ls-logo {
+        margin-top: -35px;
+    }
+
+
+
+    /*Clandestine*/
+    #clandestine .short-description {
+        width: 510px;
+    }
+
+    #clandestine .description-img {
+        right: 10px;
+        bottom: -30px;
+        height: 240px !important;
+    }
+
+    #clandestine .explanation {
+        width: 610px;
+    }
+
+    #clandestine .logo-steps-item img {
+        height: 55px;
+    }
+
+    #clandestine .logo-steps-symbol {
+        margin-top: 20px;
+    }
+
+    #clandestine .ls-logo {
+        margin-top: -15px;
+    }
+
+
+
+    /*Doble*/
+    #doblep .short-description {
+        width: 444px;
+    }
+
+    #doblep .description-img {
+        bottom: -35px;
+        height: 220px !important;
+        right: -10px;
+    }
+
+    #doblep .explanation {
+        width: 440px;
+    }
+
+
+    .spinning-doble {
+        margin-bottom: 150px !important;
+        height: 200px;
+    }
+
+
+    /*Giselle*/
+    #giselle .short-description {
+        width: 410px;
+    }
+
+    #giselle .description-img {
+        right: 70px;
+        bottom: -40px;
+        height: 250px !important;
+    }
+
+    #giselle .explanation {
+        width: 523px;
+    }
+
+    #giselle .logo-steps-item img {
+        height: 70px;
+    }
+
+    #giselle .logo-steps-symbol {
+        margin-top: 10px;
+    }
+
+    #giselle .ls-logo {
+        margin-top: -30px;
+    }
+
+
+    .summit-logos {
+        justify-content: center;
+
+    }
+
+    .summit-logos img {
+        margin: 110px 50px 200px;
+        height: 150px !important;
+    }
+
+    .infographygcs img {
+        height: 540px;
+        margin: 100px auto 150px !important;
+
+        background-color: #ffffff;
+        padding: 7px;
+        margin-bottom: 20px;
+        filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.04));
+
+    }
+
+
+
+
+
+    /*CEP*/
+    #cep .short-description {
+        width: 510px;
+    }
+
+    #cep .description-img {
+        bottom: -30px;
+        height: 190px !important;
+    }
+
+    #cep .explanation {
+        width: 330px;
+    }
+
+    #cep .logo-steps-item img {
+        height: 107px;
+    }
+
+
+
+
+    /*Dalta*/
+    #dalta .short-description {
+        width: 360px;
+    }
+
+    #dalta .description-img {
+        right: 100px;
+        bottom: -20px;
+        height: 200px !important;
+    }
+
+    #dalta .explanation {
+        width: 480px;
+    }
+
+
+
+
+
+
+    /*Flavor*/
+    #flavor .short-description {
+        width: 380px;
+    }
+
+    #flavor .description-img {
+        right: 100px;
+        bottom: -20px;
+        height: 200px !important;
+    }
+
+    #flavor .explanation {
+        width: 544px;
+    }
+
+    #flavor .logo-steps-item img {
+        height: 100px;
+    }
+
+
+
+
+
+    /*Retumba*/
+    #retumba .short-description {
+        width: 320px;
+    }
+
+    #retumba .description-img {
+        right: 100px;
+        bottom: -40px;
+        height: 250px !important;
+    }
+
+    #retumba .explanation {
+        width: 395px;
+    }
+
+    #retumba .logo-steps-item img {
+        height: 130px;
+    }
+
+
+    /*Dive*/
+    #dive .short-description {
+        width: 410px;
+    }
+
+    #dive .description-img {
+        right: 50px;
+        bottom: -20px;
+        height: 150px !important;
+    }
+
+
+    #dive .logo-steps-item img {
+        height: 125px;
+        padding-top: 25px;
+    }
+
+
+    /*Senaleticas*/
+
+    #senaleticas .modal-hero img {
+        height: 240px;
+    }
+
+    #senaleticas .short-description {
+        width: 340px;
+        text-align: left;
+    }
+
+    #senaleticas .description-img {
+        right: 50px;
+        bottom: -60px;
+        height: 220px !important;
+    }
+
+    #senaleticas .explanation {
+        width: 370px;
+    }
+
+    #senaleticas .logo-steps img {
+        height: 400px;
+    }
+
+
+
+
+    /*Smile*/
+    #smile .short-description {
+        width: 410px;
+        margin-bottom: 180px;
+    }
+
+
+
+
+
+    /*-----carousel-----*/
+
+
+    .jp-slide-wrp .carousel {
+        margin: 80px auto 200px;
+
+    }
+
+    .jp-slide-wrp .carousel-item {
+        height: 480px;
+        margin-bottom: 10px;
+    }
+
+    .jp-slide-wrp .carousel-item .carousel-slide-wrp {
+        background-size: 45px;
+
+
+    }
+
+    .jp-slide-wrp .carousel-item img {
+        padding: 7px;
+        filter: drop-shadow(4px 4px 5px rgba(0, 0, 0, 0.04));
+
+    }
+
+    .jp-slide-wrp .carousel-indicators {
+        bottom: -120px;
+    }
+
+    .jp-slide-wrp .carousel-indicators li {
+        height: 60px;
+        padding: 4px;
+        margin: 4px;
+    }
+
+    .jp-slide-wrp .carousel-indicators li img {
+        border-radius: 4px !important;
+    }
+
+    .jp-slide-wrp .carousel-indicators li:hover {
+        transform: translateY(-5px);
+    }
+
+    .jp-slide-wrp .carousel-indicators li.active {
+        transform: translateY(-12px);
+    }
+
+    .jp-slide-wrp .car-arrows {
+        width: 200px;
+        padding-right: 73px;
+        padding-left: 95px;
+        opacity: .8;
+    }
+
+    .jp-slide-wrp .carousel-control-prev {
+        left: 0;
+
+        transform: scaleX(-1);
+    }
+
+    .jp-slide-wrp .carousel-control-next {
+        right: 0;
+    }
+
+    .jp-slide-wrp .carousel-control-prev:hover {
+        transform: scaleX(-1.07) scaleY(1.07) translateX(3px);
+        opacity: 1 !important;
+
+    }
+
+    .jp-slide-wrp .carousel-control-next:hover {
+        transform: scale(1.07) translateX(3px);
+        opacity: 1 !important;
+    }
+
+}
+
+
+/* 1330-992 */
+/*1280*/
+@media all and (max-width: 1330px) {
+
+    .square-mark-title {
+
+        font-size: 28px;
+    }
+
+
+    .square-mark,
+    .square-mark-line-x,
+    .square-mark-line-y {
+        width: 380px;
+    }
+
+
+
+
+    /*-----design_wrapper------*/
+    .design-txt-intro {
+        padding: 180px 0 200px !important;
+    }
+
+    .design-p-1,
+    .design-p-2,
+    .design-p-3 {
+        width: 710px;
+    }
+
+    .design-p-3 {
+        padding-top: 35px;
+    }
+
+    .design-p-line {
+        margin: 70px auto;
+    }
+
+    .design-p-line-in {
+        width: 380px;
+    }
+
+    .design-logos-wrapper {
+        padding-bottom: 210px;
+    }
+
+
+
+
+
+    /*-----jp-modal-----*/
+
+    .jp-inner-modal-color {
+        border-radius: 12px !important;
+    }
+
+    .jp-inner-modal {
+        margin: 50px auto 50px !important;
+        padding-bottom: 70px;
+        /*width: 90%;/**/
+    }
+
+    .swiper-buttons-wrapper {
+        height: 70px;
+    }
+
+
+    .swiper-buttons-wrapper .swiper-prev,
+    .swiper-buttons-wrapper .swiper-next {
+        width: 120px;
+        border-radius: 17px;
+    }
+
+    .jp-modal-nav {
+        padding: 7px 15px;
+    }
+
+    .jpm-logo {
+        width: 65px !important;
+        margin: 0 4px;
+    }
+
+    .jpm-arrow {
+        width: 10px !important;
+    }
+
+    .the-logo,
+    .jpm-inner-block,
+    .typeface,
+    .applications,
+    .jpm-inner-flex,
+    .stationery,
+    .ui-design,
+    .applications {
+        width: 760px;
+    }
+
+
+
+
+    .text-push-wrapper {
+        margin-left: 40px;
+    }
+
+
+    /*Intro*/
+
+    .modal-hero img {
+        height: 160px;
+    }
+
+
+    .jp-modal-title .ld-title {
+        padding-left: 8px;
+    }
+
+    .jp-modal-title .number {
+
+        border-bottom: 2px solid;
+    }
+
+    .what-i-did {
+        margin-left: 30px;
+    }
+
+    /*The logo*/
+    .the-logo {
+        margin-top: 130px;
+    }
+
+    .the-logo .explanation {
+        margin: 15px 0 90px 0;
+    }
+
+
+    .logo-steps {
+        margin: 0 auto 150px;
+        padding-right: 0;
+    }
+
+    .logo-steps-item p {
+        margin: 0;
+    }
+
+    .logo-steps-item p {
+        margin: 0;
+    }
+
+
+
+
+    .logo-steps-symbol {
+        margin: 40px;
+    }
+
+
+
+    .the-logo .ls-logo {
+        height: 120px;
+    }
+
+    /*Color*/
+
+    .color-wrapper {
+        margin: 70px auto 150px;
+    }
+
+    .color-circle .color {
+        width: 45px;
+        height: 45px;
+    }
+
+    .color-circle {
+        margin: 0 14px;
+    }
+
+    .color-circle p {
+        margin: 7px 0;
+        font-size: 13px !important;
+    }
+
+
+    /*Type*/
+
+    .use-method:first-child {
+        margin-right: 60px;
+    }
+
+    .font-name-wrapper {
+        margin: 0 0 20px 15px;
+
+    }
+
+    .font-characters-wrapper {
+        margin: 0 0 150px 30px;
+    }
+
+    .font-characters-wrapper img {
+        height: 180px;
+        margin-left: 40px;
+    }
+
+
+
+    .stationery-wrp {
+        margin-bottom: 80px;
+    }
+
+    .ui-design-wrp {
+        margin-bottom: 80px;
+    }
+
+
+    .stationery-wrp img:nth-child(1) {
+        margin-top: 30px;
+        height: 480px;
+    }
+
+    .stationery-wrp img:nth-child(2) {
+        height: 260px;
+    }
+
+    .ui-design-wrp img:nth-child(1) {
+        margin-top: 30px;
+        height: 340px;
+    }
+
+    .ui-design-wrp img:nth-child(2) {
+        margin-top: 180px;
+        height: 340px;
+    }
+
+    .ui-design-wrp img:nth-child(3) {
+        margin-top: 180px;
+        height: 260px;
+    }
+
+
+
+
+
+
+
+    /*Julio Woodwork*/
+
+    #woodp .short-description {
+        width: 337px;
+    }
+
+    #woodp .description-img {
+        height: 170px !important;
+        right: -20px;
+        bottom: -10px;
+    }
+
+    #woodp .the-logo .explanation {
+        width: 392px;
+    }
+
+    #woodp .logo-steps-item:first-child {
+        transform: translateY(12px)
+    }
+
+    #woodp .logo-steps-item img {
+        padding: 3px 0;
+        height: 115px;
+    }
+
+
+
+
+    /*Roots*/
+    #roots .short-description {
+        width: 310px;
+    }
+
+    #roots .description-img {
+        right: -5px;
+        bottom: -10px;
+        height: 200px !important;
+    }
+
+    #roots .the-logo .explanation {
+        width: 447px;
+    }
+
+    #roots .logo-comp {
+
+        height: 75px;
+        top: -12px;
+        right: -10px;
+    }
+
+
+    .logo-steps-item-full {
+        text-align: center;
+        width: 600px;
+    }
+
+    #roots .logo-steps-item-full img {
+        height: 75px;
+        margin-left: auto;
+    }
+
+    #roots .logo-steps-item p {
+        width: 150px;
+    }
+
+    #roots .logo-steps-item img {
+        height: 140px;
+    }
+
+    #roots .logo-steps:last-child {
+        width: 400px;
+        padding-right: 50px;
+        margin: -100px auto 150px !important;
+    }
+
+
+
+
+    /*Sweet*/
+    #sweet .short-description {
+        width: 310px;
+    }
+
+    #sweet .description-img {
+        height: 200px !important;
+    }
+
+    #sweet .explanation {
+        width: 365px;
+    }
+
+    #sweet .logo-steps-item img {
+
+        height: 120px;
+    }
+
+    #sweet .logo-steps-item:nth-child(3) img {
+        transform: translateX(13px);
+
+    }
+
+    #sweet .logo-steps:last-child img {
+        height: 170px;
+    }
+
+    #sweet .logo-steps:last-child {
+        width: 450px;
+        padding-right: 40px;
+        margin: -40px auto 15px !important;
+    }
+
+    #sweet .font-characters-wrapper img {
+        height: 160px;
+    }
+
+
+
+    /*Mineria*/
+    #mineriav .short-description {
+        width: 280px;
+    }
+
+    #mineriav .description-img {
+        bottom: -30px;
+        height: 190px !important;
+    }
+
+    #mineriav .explanation {
+        width: 510px;
+    }
+
+    #mineriav .logo-steps-item img {
+        height: 55px;
+    }
+
+    #mineriav .ls-logo {
+        margin-bottom: 7px;
+    }
+
+    #mineriav .font-characters-wrapper img {
+        height: 210px;
+    }
+
+
+    /*Tria*/
+    #tria .short-description {
+        width: 448px;
+    }
+
+    #tria .description-img {
+        right: -15px;
+        bottom: -30px;
+        height: 200px !important;
+    }
+
+    #tria .explanation {
+        width: 290px;
+    }
+
+    #tria .logo-steps-item img {
+        height: 60px;
+        padding-left: 10px;
+        margin-bottom: 10px;
+    }
+
+    #tria .logo-steps-symbol {
+        margin-top: -20px;
+    }
+
+    #tria .ls-logo {
+        margin-top: -70px;
+    }
+
+
+
+
+
+    /*Piston*/
+    #pistonp .short-description {
+        width: 507px;
+        height: 90px !important;
+    }
+
+    #pistonp .description-img {
+        height: 100px !important;
+    }
+
+    #pistonp .explanation {
+        width: 417px;
+    }
+
+    #pistonp .logo-steps-item {
+        margin: 0 -7px;
+    }
+
+    #pistonp .logo-steps-item img {
+        height: 77px;
+        margin-bottom: 10px;
+    }
+
+    #pistonp .logo-steps-symbol {
+        margin-top: 0px;
+    }
+
+    #pistonp .ls-logo {
+        margin-top: -25px;
+    }
+
+
+
+    /*Clandestine*/
+    #clandestine .short-description {
+        width: 440px;
+    }
+
+    #clandestine .description-img {
+        right: 5px;
+        bottom: -20px;
+        height: 190px !important;
+    }
+
+    #clandestine .explanation {
+        width: 530px;
+    }
+
+    #clandestine .logo-steps-item img {
+        height: 52px;
+        margin-bottom: 10px;
+    }
+
+    #clandestine .logo-steps-symbol {
+        margin-top: 10px;
+    }
+
+    #clandestine .ls-logo {
+        margin-top: -15px;
+    }
+
+
+
+    /*Doble*/
+    #doblep .short-description {
+        width: 345px;
+    }
+
+    #doblep .description-img {
+        bottom: -15px;
+        height: 190px !important;
+    }
+
+    #doblep .explanation {
+        width: 390px;
+    }
+
+
+    .spinning-doble {
+        margin-bottom: 150px !important;
+        height: 170px;
+    }
+
+
+    /*Giselle*/
+    #giselle .short-description {
+        width: 360px;
+    }
+
+    #giselle .description-img {
+        height: 220px !important;
+    }
+
+    #giselle .explanation {
+        width: 457px;
+    }
+
+    #giselle .logo-steps-item img {
+        height: 60px;
+    }
+
+    #giselle .logo-steps-symbol {
+        margin-top: 23px;
+    }
+
+    #giselle .ls-logo {
+        margin-top: -20px;
+    }
+
+
+    .summit-logos img {
+        margin: 80px 50px 150px;
+        height: 120px !important;
+    }
+
+    .infographygcs img {
+        height: 500px;
+        margin: 70px auto 150px !important;
+        padding: 6px;
+
+    }
+
+
+
+
+
+    /*CEP*/
+    #cep .short-description {
+        width: 450px;
+    }
+
+    #cep .description-img {
+        bottom: -20px;
+        height: 150px !important;
+    }
+
+    #cep .explanation {
+        width: 330px;
+    }
+
+    #cep .logo-steps-item img {
+        height: 97px;
+    }
+
+
+
+
+    /*Dalta*/
+    #dalta .short-description {
+        width: 320px;
+    }
+
+    #dalta .description-img {
+        right: 100px;
+        bottom: -20px;
+        height: 170px !important;
+    }
+
+    #dalta .explanation {
+        width: 420px;
+    }
+
+
+
+
+
+
+    /*Flavor*/
+    #flavor .short-description {
+        width: 337px;
+    }
+
+    #flavor .description-img {
+        right: 100px;
+        bottom: -20px;
+        height: 170px !important;
+    }
+
+    #flavor .explanation {
+        width: 500px;
+    }
+
+    #flavor .logo-steps-item img {
+        height: 70px;
+    }
+
+
+
+
+
+    /*Retumba*/
+    #retumba .short-description {
+        width: 280px;
+    }
+
+    #retumba .description-img {
+        height: 200px !important;
+    }
+
+    #retumba .explanation {
+        width: 360px;
+    }
+
+    #retumba .logo-steps-item img {
+        height: 115px;
+    }
+
+
+    /*Dive*/
+    #dive .short-description {
+        width: 360px;
+    }
+
+    #dive .description-img {
+        bottom: -10px;
+        height: 120px !important;
+    }
+
+
+    #dive .logo-steps-item img {
+        height: 115px;
+        padding-top: 20px;
+    }
+
+
+    /*Senaleticas*/
+
+    #senaleticas .modal-hero img {
+        height: 200px;
+    }
+
+    #senaleticas .short-description {
+        width: 292px;
+        text-align: left;
+    }
+
+    #senaleticas .description-img {
+        right: 50px;
+        bottom: -40px;
+        height: 200px !important;
+    }
+
+    #senaleticas .explanation {
+        width: 345px;
+    }
+
+    #senaleticas .logo-steps img {
+        height: 320px;
+    }
+
+
+
+
+    /*Smile*/
+    #smile .short-description {
+        width: 360px;
+        margin-bottom: 180px;
+    }
+
+
+
+
+
+    /*-----carousel-----*/
+
+
+    .jp-slide-wrp .carousel {
+        margin: 80px auto 140px;
+
+    }
+
+    .jp-slide-wrp .carousel-item {
+        height: 400px;
+    }
+
+    .jp-slide-wrp .carousel-item .carousel-slide-wrp {
+        background-size: 35px;
+
+
+    }
+
+    .jp-slide-wrp .carousel-item img {
+        padding: 6px;
+
+    }
+
+    .jp-slide-wrp .carousel-indicators {
+        bottom: -100px;
+    }
+
+    .jp-slide-wrp .carousel-indicators li {
+        height: 45px;
+        padding: 4px;
+        margin: 2px;
+    }
+
+    .jp-slide-wrp .carousel-indicators li:hover {
+        transform: translateY(-3px);
+    }
+
+    .jp-slide-wrp .carousel-indicators li.active {
+        transform: translateY(-9px);
+    }
+
+    .jp-slide-wrp .car-arrows {
+        width: 100px;
+        padding-right: 45px;
+        padding-left: 30px;
+    }
+
+}
+
+
+/* 992-768 */
+/*992*/
+@media all and (max-width: 991px) {
+
+    .square-mark-title {
+
+        transform: translate3d(0, 30px, 0);
+        font-size: 31px;
+    }
+
+
+    .square-mark,
+    .square-mark-line-x,
+    .square-mark-line-y {
+        width: 420px;
+    }
+
+    .square-wrapper {
+        transform: translate3d(0, 0, 0);
+    }
+
+    .square-wrapper-toggle {
+        transform: translate3d(0, 80px, 0);
+    }
+
+
+
+
+    /*-----design_wrapper------*/
+    .design-txt-intro {
+        padding: 100px 0 150px !important;
+    }
+
+    .design-p-1,
+    .design-p-2,
+    .design-p-3 {
+        width: 540px;
+    }
+
+    .design-p-3 {
+        padding-top: 40px;
+    }
+
+    .design-p-line {
+        margin: 75px auto;
+    }
+
+    .design-p-line-in {
+        width: 340px;
+    }
+
+    .design-logos-wrapper {
+        width: 100%;
+        justify-content: center;
+        padding-bottom: 180px;
+    }
+
+    .design-logos {
+        width: 20%;
+        padding: 5%;
+        margin: 4%;
+    }
+
+
+
+
+
+
+
+    /*-----jp-modal-----*/
+
+
+
+
+    .jp-inner-modal-color {
+        border-radius: 12px !important;
+    }
+
+    .jp-inner-modal {
+        padding-bottom: 60px;
+        width: 85%;
+    }
+
+    .modal-bold {
+        letter-spacing: .2px;
+    }
+
+
+    .jp-modal-nav {
+        padding: 5px 18px;
+    }
+
+    .jpm-logo {
+        width: 60px !important;
+        margin: 0 4px;
+    }
+
+    .jpm-arrow {
+        width: 12px !important;
+    }
+
+    /*Intro*/
+
+    .modal-hero img {
+        height: 180px;
+        margin-bottom: 30px;
+    }
+
+    .modal-hero {
+        height: 95vh;
+
+    }
+
+
+    .the-logo,
+    .jpm-inner-block,
+    .typeface,
+    .applications,
+    .jpm-inner-flex,
+    .stationery,
+    .ui-design,
+    .applications {
+        width: 500px;
+    }
+
+
+
+
+    .jpm-inner-flex {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        flex-wrap: wrap;
+
+    }
+
+    .text-push-wrapper {
+        margin-left: 30px;
+    }
+
+
+
+
+
+    .jp-modal-title .number {
+        border-bottom: 2px solid #7D8A8E;
+    }
+
+    .jp-modal-title .ld-title {
+        padding-left: 7px;
+    }
+
+    .logo-description {
+        margin-bottom: 20px;
+    }
+
+    .short-description {
+        text-align: justify;
+
+        margin-left: 20px;
+
+    }
+
+    .description-img {
+        position: relative;
+        margin: 20px auto 0 !important;
+        width: auto !important;
+        left: auto !important;
+        right: auto !important;
+
+    }
+
+
+    .what-i-did {
+        margin-left: 40px;
+    }
+
+
+
+    /*The logo*/
+    .the-logo {
+        margin-top: 100px;
+    }
+
+    .the-logo .explanation {
+        margin: 15px 0 70px 0;
+    }
+
+    .logo-steps {
+        margin: 0 auto 150px;
+        padding-right: 0;
+    }
+
+    .logo-steps-item img {
+        margin: auto;
+    }
+
+    .logo-steps-item p {
+        font-size: 14px !important;
+    }
+
+    .logo-steps-symbol {
+        margin: 20px;
+    }
+
+    .logo-steps-symbol img {
+        height: 12px;
+        margin: 0;
+    }
+
+
+    .the-logo .ls-logo {
+        height: 100px;
+        margin-left: -7px;
+    }
+
+    /*Color*/
+
+
+
+
+
+
+    .color-wrapper {
+        margin: 70px auto 150px;
+    }
+
+    .color-circle .color {
+        width: 40px;
+        height: 40px;
+    }
+
+    .color-circle {
+        margin: 0 15px;
+    }
+
+    .color-circle p {
+        margin: 10px 0;
+    }
+
+
+
+
+    /*Type*/
+    .typeface .text-push-wrapper {
+        display: block;
+        margin: 20px auto 150px;
+
+    }
+
+
+    .where-method {
+        margin: 0 0 -10px 20px;
+    }
+
+
+    .font-name-wrapper {
+        margin: 0 0 0px 40px;
+
+    }
+
+    .font-characters-wrapper {
+        margin: 0 0 60px 40px;
+    }
+
+    .font-characters-wrapper img {
+        height: 180px;
+        margin: 0px 0px 0 40px;
+    }
+
+    .stationery-wrp {
+        margin-bottom: 120px;
+    }
+
+    .ui-design-wrp {
+        margin-bottom: 130px;
+    }
+
+    .stationery-wrp img,
+    .ui-design-wrp img {
+        margin: auto;
+    }
+
+    .stationery-wrp img:nth-child(1) {
+        margin-top: 50px;
+        height: 320px;
+    }
+
+    .stationery-wrp img:nth-child(2) {
+        height: 172px;
+        padding-right: 15px;
+    }
+
+    .ui-design-wrp img:nth-child(1) {
+        margin: 50px auto;
+        height: 250px;
+    }
+
+    .ui-design-wrp img:nth-child(2) {
+        margin-top: 200px;
+        height: 300px;
+    }
+
+    .ui-design-wrp img:nth-child(3) {
+        margin-top: 200px;
+        height: 200px;
+    }
+
+
+
+
+
+    /*Julio Woodwork*/
+
+    #woodp .short-description {
+        width: 385px;
+    }
+
+    #woodp .description-img {
+        height: 180px !important;
+
+    }
+
+    #woodp .the-logo .explanation {
+        width: 347px;
+    }
+
+
+    #woodp .logo-steps-item p {
+        width: 70px;
+    }
+
+
+    #woodp .the-logo .ls-logo {
+        transform: translateX(-15px);
+    }
+
+    #woodp .logo-steps-item:first-child {
+        transform: translateY(4px)
+    }
+
+    #woodp .logo-steps-item:first-child p {
+        width: auto;
+    }
+
+    #woodp .logo-steps-item img {
+        filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.1));
+        padding: 4px 0;
+        height: 90px;
+        margin-top: 5px;
+    }
+
+
+
+
+    /*Roots*/
+    #roots .short-description {
+        width: 350px;
+    }
+
+    #roots .description-img {
+        bottom: 0px;
+        height: 230px !important;
+    }
+
+    #roots .the-logo .explanation {
+        width: 360px;
+        margin-bottom: 20px;
+    }
+
+    #roots .logo-comp {
+        position: relative;
+        height: 85px;
+        top: auto;
+        right: auto;
+        margin: 30px auto 60px;
+    }
+
+
+    .logo-steps-item-full {
+        text-align: center;
+        width: auto;
+    }
+
+    #roots .logo-steps-item-full img {
+        height: 68px;
+        margin: 30px auto 60px;
+    }
+
+    #roots .logo-steps-item p {
+        width: 370px;
+        text-align: left;
+    }
+
+    #roots .logo-steps:nth-child(3) {
+        display: block;
+        width: auto;
+        margin: auto;
+    }
+
+    #roots .logo-steps-item img {
+        height: 140px;
+    }
+
+    #roots .logo-steps:last-child {
+        width: 380px;
+        padding-right: 40px;
+        margin: 0px auto 150px !important;
+    }
+
+    #roots .font-characters-wrapper img {
+        height: 170px;
+        margin-left: 20px;
+    }
+
+
+
+
+
+    /*Sweet*/
+    #sweet .short-description {
+        width: 354px;
+    }
+
+    #sweet .description-img {
+        bottom: 0;
+        height: 210px !important;
+        right: 0;
+    }
+
+    #sweet .explanation {
+        width: 345px;
+    }
+
+    #sweet .logo-steps-item img {
+
+        height: 100px;
+    }
+
+    #sweet .logo-steps:last-child img {
+        height: 140px;
+    }
+
+    #sweet .logo-steps:last-child {
+        width: 400px;
+        padding-right: 40px;
+        margin: -20px auto 150px !important;
+    }
+
+    #sweet .font-characters-wrapper {
+        flex-wrap: wrap;
+    }
+
+    #sweet .font-characters-wrapper img:first-child {
+
+        margin: 10px 30px 50px 20px !important;
+    }
+
+    #sweet .font-characters-wrapper img {
+        height: 175px;
+        margin: 10px 30px 50px 20px;
+    }
+
+
+
+    /*Mineria*/
+    #mineriav .short-description {
+        width: 340px;
+    }
+
+    #mineriav .description-img {
+        bottom: 0;
+        height: 170px !important;
+    }
+
+    #mineriav .explanation {
+        width: 380px;
+    }
+
+    #mineriav .logo-steps-item img {
+        height: 50px;
+        margin: auto;
+    }
+
+    #mineriav .ls-logo {
+        margin-bottom: 10px;
+    }
+
+    #mineriav .logo-steps-symbol {
+        margin: 25px;
+    }
+
+
+
+    #mineriav .font-characters-wrapper img {
+        height: 170px;
+        margin: 0 30px 0 0 !important;
+    }
+
+
+
+    /*Tria*/
+    #tria .short-description {
+        width: 400px;
+    }
+
+    #tria .description-img {
+        bottom: 0;
+        height: 220px !important;
+    }
+
+    #tria .explanation {
+        width: 367px;
+    }
+
+    #tria .logo-steps {
+        transform: translateX(-7px);
+    }
+
+    #tria .logo-steps-item img {
+        height: 52px;
+    }
+
+    #tria .logo-steps-symbol {
+        margin: -50px 10px 0;
+    }
+
+    #tria .ls-logo {
+        margin-top: -55px;
+    }
+
+    #tria .logo-steps-item p {
+        width: 105px;
+    }
+
+
+
+
+    /*Piston*/
+    #pistonp .short-description {
+        width: 370px;
+        height: 110px !important;
+    }
+
+    #pistonp .description-img {
+        height: 95px !important;
+    }
+
+    #pistonp .explanation {
+        width: 380px;
+    }
+
+    #pistonp .logo-steps-item img {
+        height: 65px;
+        padding: 0 20px;
+    }
+
+    #pistonp .logo-steps-symbol {
+        margin: -20px 20px 0;
+
+    }
+
+    #pistonp .ls-logo {
+        margin-top: -27px;
+    }
+
+    #pistonp .logo-steps-item p {
+        width: 101px;
+    }
+
+
+
+    /*Clandestine*/
+    #clandestine .short-description {
+        width: 390px;
+    }
+
+    #clandestine .description-img {
+        right: 0px;
+        bottom: 0px;
+        transform: translateX(-45px);
+        height: 200px !important;
+    }
+
+    #clandestine .explanation {
+        width: 390px;
+        margin-bottom: 100px;
+    }
+
+    #clandestine .logo-steps {
+        transform: translateX(-7px);
+    }
+
+    #clandestine .logo-steps-item img {
+        height: 40px;
+    }
+
+    #clandestine .logo-steps-item p {
+        width: 83px;
+    }
+
+    #clandestine .logo-steps-item:nth-child(5) p {
+        width: 83px;
+        height: 33px;
+    }
+
+    #clandestine .logo-steps-symbol {
+        margin: -30px 20px 0;
+    }
+
+    #clandestine .ls-logo {
+        margin-top: -35px;
+    }
+
+
+
+    /*Doble*/
+    #doblep .short-description {
+        width: 400px;
+    }
+
+    #doblep .description-img {
+        bottom: 0;
+        height: 200px !important;
+        right: 0;
+    }
+
+    #doblep .explanation {
+        width: 410px;
+    }
+
+
+    .spinning-doble {
+        margin-bottom: 150px !important;
+        height: 180px;
+    }
+
+
+
+    #doblep .font-characters-wrapper {
+        flex-wrap: wrap;
+    }
+
+    #doblep .font-characters-wrapper img:first-child {
+
+        margin: 10px 30px 50px 20px !important;
+    }
+
+    #doblep .font-characters-wrapper img {
+        height: 230px;
+        margin: 10px 30px 50px 20px;
+    }
+
+
+
+    /*Giselle*/
+    #giselle .short-description {
+        width: 407px;
+    }
+
+    #giselle .description-img {
+        right: 0px;
+        bottom: 0px;
+        height: 220px !important;
+    }
+
+    #giselle .explanation {
+        width: 407px;
+    }
+
+    #giselle .logo-steps-item img {
+        height: 50px;
+    }
+
+    #giselle .logo-steps-symbol {
+        margin-top: 10px;
+    }
+
+    #giselle .ls-logo {
+        margin-top: -10px;
+    }
+
+
+    .summit-logos {
+        justify-content: center;
+
+    }
+
+    .summit-logos img {
+        margin: 70px 27px 150px;
+        height: 90px !important;
+    }
+
+    .infographygcs img {
+        height: 540px;
+        margin: 70px auto 150px !important;
+        background-color: #ffffff;
+        padding: 7px;
+        margin-bottom: 20px;
+        filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.04));
+    }
+
+
+
+
+
+    /*CEP*/
+    #cep .short-description {
+        width: 430px;
+    }
+
+    #cep .description-img {
+        bottom: 0px;
+        height: 170px !important;
+    }
+
+    #cep .explanation {
+        width: 424px;
+    }
+
+    #cep .logo-steps-item img {
+        height: 70px;
+    }
+
+    #cep .font-characters-wrapper img {
+        height: 170px;
+        margin-left: 20px;
+    }
+
+
+
+
+    /*Dalta*/
+    #dalta .short-description {
+        width: 360px;
+    }
+
+    #dalta .description-img {
+        right: 0px;
+        bottom: 0px;
+        height: 200px !important;
+    }
+
+    #dalta .explanation {
+        width: 370px;
+    }
+
+
+
+
+
+
+    /*Flavor*/
+    #flavor .short-description {
+        width: 380px;
+    }
+
+    #flavor .description-img {
+        right: 0;
+        bottom: 0;
+        height: 200px !important;
+    }
+
+    #flavor .explanation {
+        width: 417px;
+    }
+
+    #flavor .logo-steps-item img {
+        height: 60px;
+    }
+
+
+
+
+
+    /*Retumba*/
+    #retumba .short-description {
+        width: 355px;
+    }
+
+    #retumba .description-img {
+        right: 0;
+        bottom: 0;
+        height: 220px !important;
+    }
+
+    #retumba .explanation {
+        width: 395px;
+    }
+
+    #retumba .logo-steps-item img {
+        height: 110px;
+    }
+
+
+    /*Dive*/
+    #dive .short-description {
+        width: 410px;
+    }
+
+    #dive .description-img {
+        right: 0;
+        bottom: 0;
+        height: 120px !important;
+    }
+
+
+    #dive .logo-steps-item img {
+        height: 80px;
+        padding-top: 15px;
+    }
+
+
+    /*Senaleticas*/
+
+    #senaleticas .modal-hero img {
+        height: 240px;
+    }
+
+    #senaleticas .short-description {
+        width: 340px;
+        text-align: left;
+    }
+
+    #senaleticas .description-img {
+        right: 0;
+        bottom: 0;
+        height: 200px !important;
+    }
+
+    #senaleticas .explanation {
+        width: 380px;
+    }
+
+    #senaleticas .logo-steps img {
+        height: 250px;
+        transform: translateX(-25px)
+    }
+
+
+
+
+    /*Smile*/
+    #smile .short-description {
+        width: 410px;
+        margin-bottom: 180px;
+    }
+
+
+
+    .applications {
+        margin-bottom: 50px;
+    }
+
+
+    /*-----carousel-----*/
+
+    .jp-slide-wrp .carousel {
+        margin: 0px auto 200px;
+    }
+
+
+    .jp-slide-wrp .carousel-item {
+        height: 300px;
+        transition: transform .4s ease-in-out !important;
+    }
+
+    .jp-slide-wrp .carousel-item .carousel-slide-wrp {
+        background-size: 35px;
+    }
+
+    .jp-slide-wrp .carousel-item img {
+        padding: 6px;
+    }
+
+    .jp-slide-wrp .carousel-indicators {
+        margin: auto;
+        bottom: -65px;
+    }
+
+    .jp-slide-wrp .carousel-indicators li {
+        height: 33px;
+        padding: 3px;
+        margin: 2px;
+        transition: all .4s ease !important;
+    }
+
+    .jp-slide-wrp .carousel-indicators li:hover {
+        transform: translateY(0px);
+    }
+
+    .jp-slide-wrp .carousel-indicators li.active {
+        opacity: 1 !important;
+        transform: translate3d(0, -7px, 0);
+    }
+
+
+    .jp-slide-wrp .car-arrows {
+        width: 55px;
+        padding: 10px;
+        height: 55px;
+        opacity: 1;
+        bottom: -125px;
+        top: auto;
+    }
+
+    .jp-slide-wrp .carousel-control-prev {
+        right: 70px;
+        margin: auto;
+
+    }
+
+    .jp-slide-wrp .carousel-control-next {
+        left: 70px;
+        margin: auto;
+    }
+
+    .jp-slide-wrp .carousel-control-prev:hover {
+        transform: scaleX(-1) translateX(0);
+        opacity: 1 !important;
+
+    }
+
+    .jp-slide-wrp .carousel-control-next:hover {
+        transform: scale(1) translateX(0);
+        opacity: 1 !important;
+    }
+}
+
+
+/* 730-480 */
+/*768*/
+@media all and (max-width: 725px) {
+
+
+
+
+    .square-mark-title {
+        font-size: 28px;
+    }
+
+
+    .square-mark,
+    .square-mark-line-x,
+    .square-mark-line-y {
+        width: 370px;
+    }
+
+
+
+
+
+    /*-----design_wrapper------*/
+    .design-txt-intro {
+        padding: 100px 0 150px !important;
+    }
+
+    .design-p-1,
+    .design-p-2,
+    .design-p-3 {
+        width: 375px;
+    }
+
+    .design-p-3 {
+        padding-top: 35px;
+    }
+
+    .design-p-line {
+        margin: 65px auto;
+    }
+
+    .design-p-line-in {
+        width: 240px;
+    }
+
+    .design-logos-wrapper {
+        padding-bottom: 150px;
+    }
+
+    .design-logos {
+        width: 20%;
+        padding: 5%;
+        margin: 4%;
+    }
+
+
+
+    /*-----jp-modal-----*/
+
+
+
+
+    .jp-inner-modal-color {
+        border-radius: 12px !important;
+    }
+
+    .jp-inner-modal {
+        margin-top: 30px !important;
+        padding-bottom: 30px;
+        width: 90%;
+    }
+
+   
+
+    .modal-bold {
+        letter-spacing: .2px;
+    }
+
+    .swiper-buttons-wrapper {
+        height: 55px;
+    }
+
+
+    .swiper-buttons-wrapper .swiper-prev,
+    .swiper-buttons-wrapper .swiper-next {
+        opacity: 1 !important;
+        width: 90px;
+    }
+
+    .jp-modal-nav {
+        padding: 2px 13px;
+    }
+
+    .jpm-logo {
+        width: 40px !important;
+        margin: 0;
+    }
+
+    .jpm-arrow {
+        width: 9px !important;
+    }
+
+    /*Intro*/
+
+    .modal-hero img {
+        height: 120px;
+        margin-bottom: 30px;
+    }
+
+    .modal-hero {
+        height: 95vh;
+
+    }
+
+
+    .the-logo,
+    .jpm-inner-block,
+    .typeface,
+    .applications,
+    .jpm-inner-flex,
+    .stationery,
+    .ui-design,
+    .applications {
+        width: 85%;
+    }
+
+
+
+    .text-push-wrapper {
+        margin-left: 0px;
+    }
+
+    .jp-modal-title .ld-title {
+        padding-left: 6px;
+    }
+
+    .logo-description {
+        margin-bottom: 10px;
+    }
+
+    .short-description {
+        text-align: left;
+        margin-left: 15px;
+    }
+
+    .description-img {
+        position: relative;
+        margin: 10px auto 0 !important;
+        width: auto !important;
+        left: auto !important;
+        right: auto !important;
+
+    }
+
+
+    .what-i-did {
+        margin-left: 20px;
+        width: 260px;
+    }
+
+
+
+
+    .the-logo .explanation {
+        margin: 15px 0 70px 15px;
+        text-align: left;
+    }
+
+    .logo-steps {
+        margin: 0 auto 100px;
+        padding-right: 0;
+        display: block;
+        text-align: center;
+    }
+
+    .logo-steps-item img {
+        margin: auto;
+    }
+
+    .logo-steps-item p {
+        width: auto !important;
+        font-size: 14px !important;
+    }
+
+    .logo-steps-symbol {
+        margin: 20px;
+    }
+
+    .logo-steps-symbol:nth-last-child(2) {
+        transform: rotate(90deg);
+    }
+
+    .logo-steps-symbol img {
+        height: 12px;
+    }
+
+
+    .the-logo .ls-logo {
+        height: 100px;
+        margin: -15px auto 0;
+    }
+
+    /*Color*/
+
+
+
+
+
+
+    .color-wrapper {
+        margin: 30px auto 100px;
+        width: 270px;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .color-circle .color {
+        width: 40px;
+        height: 40px;
+    }
+
+    .color-circle {
+        margin: 15px;
+    }
+
+    .circle-mobile {
+        margin-right: auto;
+    }
+
+    .false-circle {
+        display: block;
+        opacity: 0 !important;
+    }
+
+
+    .color-circle p {
+        margin: 10px 0;
+    }
+
+
+
+
+    /*Type*/
+    .typeface .text-push-wrapper {
+        margin: 30px auto 100px;
+
+    }
+
+
+    .where-method {
+        margin: -10px 0 -10px 15px;
+    }
+
+
+    .font-name-wrapper {
+        margin: 0 0 0px 30px;
+
+    }
+
+    .font-characters-wrapper {
+        margin: 0 0 60px 30px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 235px;
+    }
+
+    .font-characters-wrapper img {
+        height: 160px;
+        margin: 0;
+        margin-bottom: 30px;
+    }
+
+
+
+
+
+    .stationery-wrp {
+        margin-bottom: 100px;
+    }
+
+    .ui-design-wrp {
+        margin-bottom: 100px;
+    }
+
+    .stationery-wrp img,
+    .ui-design-wrp img {
+        margin: auto;
+    }
+
+    .stationery-wrp img:nth-child(1) {
+        margin-top: 50px;
+        height: auto !important;
+        width: 100%;
+    }
+
+    .stationery-wrp img:nth-child(2) {
+        height: auto !important;
+        width: 100%;
+        padding-right: 0px;
+        margin-top: 20px;
+    }
+
+    .ui-design-wrp img:nth-child(1) {
+        margin: 30px auto;
+        height: auto !important;
+        width: 100%;
+    }
+
+    .ui-design-wrp img:nth-child(2) {
+        margin-top: 150px;
+        height: auto !important;
+        width: 70%;
+    }
+
+    .ui-design-wrp img:nth-child(3) {
+        margin-top: 150px;
+        height: auto !important;
+        width: 100%;
+    }
+
+
+
+
+
+    /*Julio Woodwork*/
+
+    #woodp .short-description {
+        width: 210px;
+    }
+
+    #woodp .description-img {
+        height: 110px !important;
+    }
+
+    #woodp .the-logo .explanation {
+        width: 220px;
+    }
+
+
+
+    #woodp .logo-steps-item p {
+        width: 70px;
+    }
+
+
+    #woodp .the-logo .ls-logo {
+        transform: translateX(0);
+    }
+
+    #woodp .logo-steps-item:first-child {
+        transform: translateY(0px)
+    }
+
+    #woodp .logo-steps-item:first-child p {
+        width: auto;
+    }
+
+    #woodp .logo-steps-item img {
+        filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.1));
+        padding: 7px 0;
+        height: 80px;
+    }
+
+
+
+
+    /*Roots*/
+    #roots .short-description {
+        width: 250px;
+    }
+
+    #roots .description-img {
+        bottom: 0px;
+        height: 170px !important;
+    }
+
+    #roots .the-logo .explanation {
+        width: 250px;
+    }
+
+    #roots .logo-comp {
+        position: relative;
+        height: 70px;
+        top: auto;
+        right: auto;
+        margin: 20px auto 60px;
+
+        transform: translateX(7px);
+    }
+
+    #roots .logo-steps-item-full img {
+        height: 43px;
+        transform: translateX(-10px);
+        margin: 30px auto 60px;
+    }
+
+    #roots .logo-steps-item img {
+        height: 100px;
+    }
+
+    #roots .logo-steps:last-child {
+        display: flex;
+        width: 230px;
+        padding-right: 7px;
+        margin: 0px auto 100px !important;
+    }
+
+    #roots .font-characters-wrapper img {
+        margin: 0 0 40px 0 !important;
+    }
+
+    #roots .font-characters-wrapper img:last-child {
+        margin: 0 !important;
+    }
+
+
+
+
+
+    /*Sweet*/
+    #sweet .short-description {
+        width: 250px;
+    }
+
+    #sweet .description-img {
+        bottom: 0;
+        height: 140px !important;
+        right: 0;
+    }
+
+    #sweet .explanation {
+        width: 255px;
+    }
+
+    #sweet .logo-steps-item img {
+
+        height: 90px;
+    }
+
+    #sweet .logo-steps:last-child img {
+        height: 120px;
+    }
+
+    #sweet .logo-steps:last-child {
+        display: flex;
+        width: 270px;
+        padding-right: 10px;
+        margin: -30px auto 100px !important;
+    }
+
+
+
+
+
+    #sweet .font-characters-wrapper img:last-child {
+        margin-bottom: 0;
+    }
+
+
+
+    /*Mineria*/
+    #mineriav .short-description {
+        width: 240px;
+    }
+
+    #mineriav .description-img {
+        bottom: 0;
+        height: 130px !important;
+    }
+
+    #mineriav .explanation {
+        width: 260px;
+    }
+
+    #mineriav .logo-steps-item img {
+        height: 40px;
+        margin: auto;
+    }
+
+    #mineriav .logo-steps-symbol {
+        margin: 25px;
+    }
+
+
+
+    #mineriav .font-characters-wrapper img {
+        height: 180px;
+        margin: 0 0 40px 0 !important;
+    }
+
+    #mineriav .font-characters-wrapper img:last-child {
+        margin: 0 !important;
+    }
+
+
+
+    /*Tria*/
+    #tria .short-description {
+        width: 240px;
+    }
+
+    #tria .description-img {
+        bottom: 0;
+        height: 180px !important;
+        transform: translateX(-10px);
+    }
+
+    #tria .explanation {
+        width: 240px;
+    }
+
+    #tria .logo-steps {
+        transform: translateX(-7px);
+    }
+
+    #tria .logo-steps-item img {
+        height: 52px;
+    }
+
+    #tria .logo-steps-item {
+        margin: 40px auto;
+
+    }
+
+    #tria .logo-steps-symbol {
+        margin: 0 auto;
+    }
+
+    #tria .logo-steps-symbol img {
+        transform: rotate(90deg);
+        margin: auto;
+
+    }
+
+    #tria .ls-logo {
+        margin-top: 20px;
+    }
+
+    #tria .logo-steps-item p {
+        width: 110px !important;
+        margin: auto;
+    }
+
+    #tria .logo-steps-item p br {
+        display: none;
+    }
+
+
+
+
+    /*Piston*/
+    #pistonp .short-description {
+        width: 230px;
+        height: 110px !important;
+    }
+
+    #pistonp .description-img {
+        height: 65px !important;
+    }
+
+    #pistonp .explanation {
+        width: 240px;
+    }
+
+    #pistonp .logo-steps-item {
+        margin: 40px auto;
+
+    }
+
+    #pistonp .logo-steps-symbol {
+        margin: 0 auto;
+    }
+
+    #pistonp .logo-steps-symbol img {
+        transform: rotate(90deg);
+        margin: auto;
+
+    }
+
+    #pistonp .ls-logo {
+        margin-top: 20px;
+    }
+
+    #pistonp .logo-steps-item p {
+        width: 110px !important;
+        margin: auto;
+    }
+
+
+
+    /*Clandestine*/
+    #clandestine .short-description {
+        width: 265px;
+        font-size: 13px !important;
+    }
+
+    #clandestine .description-img {
+        transform: translateX(-33px);
+        height: 150px !important;
+    }
+
+    #clandestine .explanation {
+        width: 250px;
+    }
+
+    #clandestine .logo-steps-item {
+        margin: 40px auto;
+
+    }
+
+    #clandestine .logo-steps-symbol {
+        margin: 0 auto;
+    }
+
+    #clandestine .logo-steps-symbol img {
+        transform: rotate(90deg);
+        margin: auto;
+
+    }
+
+    #clandestine .ls-logo {
+        margin-top: 20px;
+    }
+
+    #clandestine .logo-steps-item p {
+        width: 110px !important;
+        margin: auto;
+    }
+
+
+
+    /*Doble*/
+    #doblep .short-description {
+        width: 260px;
+    }
+
+    #doblep .description-img {
+        bottom: 0;
+        height: 160px !important;
+        right: 0;
+    }
+
+    #doblep .explanation {
+        width: 260px;
+    }
+
+
+    .spinning-doble {
+        margin-bottom: 100px !important;
+        height: 150px;
+    }
+
+
+
+    #doblep .font-characters-wrapper {
+        flex-wrap: wrap;
+    }
+
+    #doblep .font-characters-wrapper img:first-child {
+
+
+        margin: 10px 0 40px 0 !important;
+    }
+
+    #doblep .font-characters-wrapper img {
+        height: 220px;
+        margin: 0 0 40px 0 !important;
+    }
+
+    #doblep .font-characters-wrapper img:last-child {
+        height: 220px;
+        margin: 0 !important;
+    }
+
+
+
+    /*Giselle*/
+    #giselle .short-description {
+        width: 250px;
+    }
+
+    #giselle .description-img {
+        height: 150px !important;
+    }
+
+    #giselle .explanation {
+        width: 250px;
+    }
+
+    #giselle .logo-steps-item {
+        margin: 40px auto;
+
+    }
+
+    #giselle .logo-steps-symbol {
+        margin: 0 auto;
+    }
+
+    #giselle .logo-steps-symbol img {
+        transform: rotate(90deg);
+        margin: auto;
+
+    }
+
+    #giselle .ls-logo {
+        margin-top: 20px;
+    }
+
+    #giselle .logo-steps-item p {
+        margin: auto;
+    }
+
+
+    .summit-logos {
+        justify-content: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 140px;
+        margin: auto;
+        margin-bottom: 100px;
+
+    }
+
+    .summit-logos img {
+        margin: 50px auto 20px;
+        height: 100px !important;
+
+    }
+
+    .infographygcs img {
+        height: 380px;
+        margin: 70px auto 100px !important;
+        padding: 4px;
+    }
+
+
+
+
+
+    /*CEP*/
+    #cep .short-description {
+        width: 240px;
+    }
+
+    #cep .description-img {
+        height: 140px !important;
+    }
+
+    #cep .explanation {
+        width: 260px;
+    }
+
+    #cep .logo-steps-item {
+        margin: 30px auto;
+
+    }
+
+    #cep .logo-steps-symbol {
+        margin: 0 auto;
+    }
+
+    #cep .logo-steps-symbol img {
+        transform: rotate(90deg);
+        margin: auto;
+
+    }
+
+    #cep .ls-logo {
+        margin-top: 10px;
+    }
+
+    #cep .logo-steps-item p {
+        width: 110px !important;
+        margin: auto;
+    }
+
+    #cep .font-characters-wrapper {
+        flex-wrap: wrap;
+    }
+
+    #cep .font-characters-wrapper img:first-child {
+
+
+        margin: 10px 0 40px 0 !important;
+    }
+
+    #cep .font-characters-wrapper img {
+        height: 220px;
+        margin: 0 0 40px 0 !important;
+    }
+
+    #cep .font-characters-wrapper img:last-child {
+        height: 220px;
+        margin: 0 !important;
+    }
+
+
+
+
+    /*Dalta*/
+    #dalta .short-description {
+        width: 230px;
+    }
+
+    #dalta .description-img {
+        right: 0px;
+        bottom: 0px;
+        height: 160px !important;
+    }
+
+    #dalta .explanation {
+        width: 240px;
+    }
+
+
+
+
+
+
+    /*Flavor*/
+    #flavor .short-description {
+        width: 230px;
+    }
+
+    #flavor .description-img {
+        height: 160px !important;
+    }
+
+    #flavor .explanation {
+        width: 260px;
+    }
+
+    #flavor .logo-steps-item img {
+        height: 60px;
+    }
+
+
+
+
+
+    /*Retumba*/
+    #retumba .short-description {
+        width: 253px;
+    }
+
+    #retumba .description-img {
+        height: 150px !important;
+    }
+
+    #retumba .explanation {
+        width: 235px;
+    }
+
+    #retumba .logo-steps-item img {
+        height: 110px;
+    }
+
+
+    /*Dive*/
+    #dive .short-description {
+        width: 220px;
+    }
+
+    #dive .description-img {
+        height: 80px !important;
+    }
+
+
+
+    /*Senaleticas*/
+
+    #senaleticas .modal-hero img {
+        height: 200px;
+    }
+
+    #senaleticas .short-description {
+        width: 230px;
+    }
+
+    #senaleticas .description-img {
+        height: 160px !important;
+    }
+
+    #senaleticas .explanation {
+        width: 230px;
+    }
+
+    #senaleticas .logo-steps img {
+        height: 160px;
+        margin: auto;
+        transform: translateX(0px)
+    }
+
+
+
+
+    /*Smile*/
+    #smile .short-description {
+        width: 230px;
+        margin-bottom: 180px;
+    }
+
+
+
+    .applications {
+        margin-bottom: 30px;
+    }
+
+
+    /*-----carousel-----*/
+
+    .jp-slide-wrp .carousel {
+        margin: 0px auto 140px;
+
+    }
+
+
+    .jp-slide-wrp .carousel-item {
+        height: 190px;
+    }
+
+    .jp-slide-wrp .carousel-item .carousel-slide-wrp {
+        background-size: 35px;
+    }
+
+    .jp-slide-wrp .carousel-item img {
+        max-width: 85%;
+        padding: 4px;
+        filter: drop-shadow(3px 3px 4px rgba(0, 0, 0, 0.04));
+    }
+
+    .jp-slide-wrp .carousel-indicators {
+        bottom: -43px;
+    }
+
+    .jp-slide-wrp .carousel-indicators li {
+        height: 22px;
+        padding: 2px;
+        margin: 2px;
+    }
+
+    .jp-slide-wrp .carousel-indicators li.active {
+        transform: translate3d(0, -5px, 0);
+    }
+
+    .jp-slide-wrp .car-arrows {
+        width: 50px;
+        height: 50px;
+        bottom: -100px;
+        top: auto;
+    }
+
+    .jp-slide-wrp .carousel-control-prev {
+        right: 50px;
+
+    }
+
+    .jp-slide-wrp .carousel-control-next {
+        left: 50px;
+    }
+
+
+
+
+}
+
+
+/* 489-0 */
+/*480*/
+@media all and (max-width: 489px) {
+
+    .square-mark-title {
+        font-size: 23px;
+    }
+
+
+    .square-mark,
+    .square-mark-line-x,
+    .square-mark-line-y {
+        width: 280px;
+    }
+
+
+
+
+
+
+
+    /*-----design_wrapper------*/
+    .design-txt-intro {
+        padding: 100px 0 150px !important;
+    }
+
+    .design-p-1,
+    .design-p-2,
+    .design-p-3 {
+        width: 260px;
+    }
+
+    .design-p-3 {
+        padding-top: 35px;
+    }
+
+    .design-p-line {
+        margin: 60px auto;
+    }
+
+    .design-p-line-in {
+        width: 240px;
+    }
+
+
+    .design-logos-wrapper {
+        padding-bottom: 102px;
+    }
+
+    .design-logos {
+        width: 20% !important;
+        padding: 4% !important;
+        margin: 4% !important;
+        height: 20% !important;
+    }
+
+
+
+}
+
+@media all and (max-width: 365px) {
+
+
+    .square-mark-title {
+        font-size: 21px;
+        letter-spacing: 0px;
+    }
+
+
+    .square-mark,
+    .square-mark-line-x,
+    .square-mark-line-y {
+        width: 250px;
+    }
+
+
+
+
+
+    /*-----design_wrapper------*/
+    .design-txt-intro {
+        transform: scale(.9);
+        padding: 50px 0 100px !important;
+    }
+
+}
